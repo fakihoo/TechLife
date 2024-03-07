@@ -1,0 +1,28 @@
+﻿@model Shop
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="~/@Model.ImgURL" class="img-fluid rounded-lg" alt="Shop Image" style="max-height: 400px;">
+        </div>
+        <div class="col-md-8">
+            <h1 class="display-4"><strong>@Model.Name</strong></h1>
+            <h2 style="color: green; font-weight: bold; font-size: 2rem;" class="mb-4">@Model.Price<i class="bi bi-currency-dollar"></i></h2>
+            <p class="lead">@Model.Description</p>
+
+            <div class="row">  
+                @if (!User.IsInRole(SD.Role_Admin))
+                {
+                    <a id="addToCartBtn" asp-controller="Cart" asp-action="Add" asp-route-id="@Model.ShopId" class="btn btn-primary">
+                        <i class="bi bi-cart3"></i> Add to Cart
+                    </a>
+                }
+            </div>
+            <p class="mt-5">Category: <span style="color: green; font-size: 1.5rem;"> &nbsp; @Model.Category</span></p>
+            <a asp-controller="shop" asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-backspace"></i> Previous
+            </a>
+        </div>
+    </div>
+</div>
+

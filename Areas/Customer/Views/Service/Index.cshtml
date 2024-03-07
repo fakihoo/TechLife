@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+@model List<Service>
+
+<div class="container">
+    <h1 class="my-5">Services</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Phone</th>
+                <th>Device Model</th>
+                <th>Message</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>@obj.CustName</td>
+                    <td>@obj.Location</td>                  
+                    <td>@obj.ServiceType</td>
+                    <td>@obj.deviceModel</td>
+                    <td>@obj.message</td>
+                    <td>
+                        @if(User.IsInRole(SD.Role_Admin)){
+                        <a asp-controller="Service" asp-action="Delete" asp-route-id="@obj.ServiceId" class="btn btn-danger float-md-end mx-2">
+                            <i class="bi bi-x-square-fill"></i>                      
+                        </a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

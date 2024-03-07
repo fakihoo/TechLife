@@ -1,0 +1,25 @@
+﻿@model Cart
+
+<form method="post">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="~/@Model.ImgURL" class="img-fluid rounded-lg" alt="Shop Image" style="max-height: 400px;">
+        </div>
+        <div class="col-md-8">
+            <h1 class="display-4"><strong>@Model.CartName</strong></h1>
+            <h2 style="color: green; font-weight: bold; font-size: 2rem;" class="mb-4">@Model.CartPrice<i class="bi bi-currency-dollar"></i></h2>
+
+            <p class="mt-5"> Are you sure you want to Delete this Product?</span></p>
+            <div class="col-6 my-4">
+                <button type="submit" class="btn btn-danger form-control" style="width:150px">Delete</button>
+            </div>
+            <a asp-controller="shop" asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-backspace"></i> Previous
+            </a>
+        </div>
+    </div>
+
+
+</div>
+</form>

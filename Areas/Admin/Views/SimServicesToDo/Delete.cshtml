@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+@model SimServicesToDo
+
+<form method="post">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="display-4"><strong>@Model.SimServicesToDoName</strong></h1>         
+            <h2 style="color: green; font-weight: bold; font-size: 2rem;" class="mb-4">@Model.Price<i class="bi bi-currency-dollar"></i></h2>
+              <h3>Customer Name: <strong>@Model.CustName</strong></h3>
+            <p class="mt-5"> Are you sure you Done this Task?</span></p>
+            <div class="col-6 my-4">
+    <button type="submit" class="btn btn-success form-control" style="width:150px">Done</button>
+</div>
+            <a asp-area="Admin" asp-controller="SimServicesToDo" asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-backspace"></i> Previous
+            </a>
+        </div>
+    </div>
+
+
+</div>
+</form>

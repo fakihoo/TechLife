@@ -1,0 +1,229 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-bottom: 7px solid;
+    border-color: lightgreen;
+
+
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.header img {
+    max-width: 100%;
+    /* Set maximum width to 100% of the container */
+    max-height: 50%;
+    /* Set maximum height to 100% of the container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.header a:hover {
+    color: lightgreen;
+}
+
+.flex-container-header {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensure at least full viewport height */
+
+    min-width: 100%;
+
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    /* Set a maximum width for better readability on larger screens */
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a box shadow for visual separation */
+    background-color: white;
+}
+
+.imgflex {
+    flex: 1;
+    /* Take up available space */
+    margin: 20px;
+    /* Add spacing between image and text */
+}
+
+.imgflex img {
+    max-width: 100%;
+    /* Ensure the image is responsive */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    /* Apply responsive styles for small screens */
+    .container {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+        text-align: center;
+        /* Center text content */
+    }
+
+    .imgflex {
+        margin-right: 0;
+        /* Remove margin for small screens */
+        margin-bottom: 20px;
+        /* Add spacing between image and text on small screens */
+    }
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: baseline;
+    justify-content: center;
+    width: 100%;
+}
+
+.container3 .btn-light:hover {
+    background-color: rgb(95, 244, 95);
+
+    color: rgb(255, 255, 255);
+    /* Set text color for better visibility */
+}
+
+.container4 {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(95, 244, 95);
+
+}
+
+.card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 100px;
+    object-fit: cover;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+hr {
+    margin: 0;
+    /* Remove default margin for hr */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(105, 169, 105, 0.7);
+    /* Light green with 70% transparency */
+    padding: 20px;
+    color: white;
+}
+
+.carousel-caption p {
+    text-align: center;
+    /* Center align the text */
+    font-size: 1.25rem;
+    /* Medium font size (adjust as needed) */
+    font-family: sans-serif;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: rgb(94, 213, 94) !important;
+    color: white !important;
+}
+
+.footer-box {
+    background-color: rgb(37, 33, 33);
+    padding: 20px;
+}
+
+.footer-box h5 {
+    color: #fff;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-box a:hover {
+    color: #22ac22;
+}

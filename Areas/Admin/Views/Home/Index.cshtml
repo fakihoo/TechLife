@@ -1,0 +1,95 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+<!-- Small boxes (Stat box) -->
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>Tech Life</h3>
+
+                <p>Add Items to Shop</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-bag"></i>
+            </div>
+            <a asp-area="Customer" asp-controller="Shop" asp-action="Add" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>Tech Life</h3>
+
+                <p>Check Services</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-hammer"></i>
+            </div>
+            <a asp-area="Customer" asp-controller="Service" asp-action="Index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h3 style="color:white;">Tech Life</h3>
+
+                <p>Sim Services To Do</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-sim"></i>
+            </div>
+            <a asp-area="Admin" asp-controller="SimServicesToDo" asp-action="Index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h3>Tech Life</h3>
+
+                <p>Delete Items From Shop</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-trash-fill"></i>
+            </div>
+            <a asp-area="Customer" asp-controller="Shop" asp-action="Index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-secondary">
+            <div class="inner">
+                <h3>Tech Life</h3>
+
+                <p>Add New Mtc Sim Service</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-database-add"></i>
+            </div>
+            <a asp-area="Customer" asp-controller="SimService" asp-action="MtcIndex" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-light">
+            <div class="inner">
+                <h3>Tech Life</h3>
+
+                <p>Add New Alfa Sim Service</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-database-fill-add"></i>
+            </div>
+            <a asp-area="Customer" asp-controller="SimService" asp-action="AlfaIndex" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+</div>

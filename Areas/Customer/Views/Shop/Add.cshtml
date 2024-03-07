@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+@model Shop
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pc-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="my-5">Add New Product</h1>
+                <a asp-controller="Shop" asp-action="Index" class="btn btn-danger btn-sm">
+                    Delete Items
+                </a>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"> Product Name</label>
+            <input asp-for="Name" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description"> Product Description</label>
+            <input asp-for="Description" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price"> Product Price</label>
+            <input asp-for="Price" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category"> Product Category</label>
+            <input asp-for="Category" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantity"> Product Quantity</label>
+            <input asp-for="Quantity" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="ImgURL"> Product Image</label>
+            <input asp-for="ImgURL" class="form-control" placeholder="img/ImgURL.jpg" required />
+            <span asp-validation-for="ImgURL" class="text-danger"></span>
+        </div>
+        <div class="row mt-4">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Shop" asp-action="Index" class="btn btn-primary" style="width:150px">GO Back</a>
+            </div>
+        </div>
+
+
+    </div>
+</form>

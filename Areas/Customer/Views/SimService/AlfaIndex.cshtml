@@ -1,0 +1,93 @@
+﻿@model List<SimService>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    .skewed {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: #4CAF50;
+        z-index: 0;
+        transform: skewY(6deg);
+        transform-origin: top right;
+    }
+
+    .card-container {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+    }
+
+    .card {
+        flex: 0 0 100%;
+        max-width: 18rem;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .arrow-icon {
+        font-size: 24px;
+    }
+</style>
+<section>
+    <div class="skewed"></div>
+</section>
+<a asp-controller="SimService" asp-action="Index" class="btn top-left">
+    <i class="bi bi-arrow-left-square-fill  arrow-icon"></i>
+</a>
+@if (User.IsInRole(SD.Role_Admin))
+{
+    <div class="col-12 text-end mb-3">
+        <a asp-controller="SimService" asp-action="Add" class="btn btn-secondary"><i class="bi bi-plus-circle"></i> Add New </a>
+    </div>
+}
+<div class="card-container">
+    @foreach (var obj in Model)
+    {
+        if (obj.SimType.Equals("Alfa"))
+        {
+            <div class="card shadow rounded">
+                <img class="card-img-top" src="~/@obj.ImgUrl" alt="Card image cap">
+                @if (User.IsInRole(SD.Role_Admin))
+                {
+                    <a asp-controller="SimService" asp-action="Delete" asp-route-id="@obj.SimServiceId" class="btn btn-danger position-absolute top-0 end-0 m-2">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                }
+                <div class="card-body">
+                    <h5 class="card-title">@obj.SimServiceName</h5>
+                    <p class="card-text">a month of service, for $@obj.Price</p>
+                </div>
+                @if(!User.IsInRole(SD.Role_Admin)){
+                <div class="card-footer">                   
+                    <div class="mt-auto">
+                        
+                       <a asp-area="Admin" asp-controller="SimServicesToDo" asp-action="Add" asp-route-id=@obj.SimServiceId  class="btn btn-success btn-block"> 
+                           <i class="bi bi-folder-plus"></i> Request Service
+                       </a>
+                        
+                    </div>
+                </div>
+                }
+            </div>
+        }
+    }
+</div>
+                   

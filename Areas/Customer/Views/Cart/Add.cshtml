@@ -1,0 +1,43 @@
+﻿@model TechLife.Models.Cart
+
+
+<form method="post">
+    <div class="container">
+        <h1>Add Item to Cart</h1>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="~/@Model.ImgURL" class="img-fluid rounded-lg" alt="Shop Image" style="max-height: 400px;">
+                    </div>
+                    <div class="col-md-8">
+                        <h1 class="display-4"><strong>@Model.CartName</strong></h1>
+                        <h2 style="color: green; font-weight: bold; font-size: 2rem;" class="mb-4">@Model.CartPrice<i class="bi bi-currency-dollar"></i></h2>
+                        <p class="mt-5">Quantity: <span style="color: green; font-size: 1.5rem;">&nbsp; @Model.CartQuantity</span></p>
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Form to submit and add the item to cart -->
+            <!-- Hidden fields to pass Cart details -->
+            <input type="hidden" asp-for="CartName" value="@Model.CartName" />
+            <input type="hidden" asp-for="CartPrice" value="@Model.CartPrice" />
+            <input type="hidden" asp-for="CartQuantity" value="@Model.CartQuantity" />
+            <input type="hidden" asp-for="CartSubTotal" value="@Model.CartSubTotal" />
+            <input type="hidden" asp-for="ImgURL" value="@Model.ImgURL" />
+            <input type="hidden" asp-for="ShopId" value="@Model.ShopId" />
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+                <a asp-controller="shop" asp-action="Index" class="btn btn-secondary float-lg-end">
+                    <i class="bi bi-backspace"></i> Previous
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
