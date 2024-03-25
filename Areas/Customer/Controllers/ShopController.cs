@@ -18,9 +18,18 @@ namespace TechLife.Areas.Customer.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchText = "")
         {
-            List<Shop> objShopList = (List<Shop>)await _unitOfWork.Shop.GetAllAsync();
+            List<Shop> objShopList;
+            if(searchText !="" && searchText != null)
+            {
+                objShopList = (List<Shop>)await _unitOfWork.Shop.FindByConditionAsync(s => s.Name.Contains(searchText));
+            }
+            else
+            {
+                objShopList = (List<Shop>)await _unitOfWork.Shop.GetAllAsync();
+            }
+            
             return View(objShopList);
         }
 
