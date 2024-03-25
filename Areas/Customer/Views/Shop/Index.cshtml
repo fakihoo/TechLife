@@ -16,9 +16,9 @@
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
             <form class="search-form" asp-action="Index" asp-controller="Shop">
-                <div class="search-container">
-                    <input type="text" name="searchText" placeholder="Search" class="search-input">
-                    <button type="submit" class="submit-btn">Go</button>
+                <div class="input-group">
+                    <input type="text" name="searchText" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
+                    <button class="btn btn-primary mr-3" type="submit" id="button-addon2">Go</button>
                 </div>
             </form>
             @if (!User.IsInRole(SD.Role_Admin))
