@@ -1,0 +1,104 @@
+﻿@using TechLife.Models.DTOs
+@model ShopDisplay
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/ShopIndex.CSS" rel="stylesheet">
+
+<style>
+    .fixed-height {
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Shop</h1>
+        </div>
+        <div class="col-md-8 d-flex justify-content-end align-items-center ml-auto">
+            <form asp-action="Index" class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label class="visually-hidden" for="genreId">Category</label>
+                    <select class="form-select" id="genreId" name="genreId">
+                        <option selected>Search By Category</option>
+                        @foreach (var genre in Model.Genres)
+                        {
+                            <option selected="@(genre.Id == Model.GenreId)"value="@genre.Id">@genre.GenreName</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label class="visually-hidden" for="sterm">Search</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="@Model.STerm"id="sterm" name="sterm" placeholder="Search" />
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <a asp-controller="ShopStore" asp-action="Index" class="btn btn-primary"><i class="bi bi-arrow-clockwise"></i></a>
+                    </div>
+                </div>
+                <div class="col-auto ml-2">
+                    @if (!User.IsInRole(SD.Role_Admin))
+                    {
+                        <a asp-controller="Cart" asp-action="Index" class="btn btn-success">
+                            <i class="bi bi-bag"></i> Cart
+                        </a>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+@if (User.IsInRole(SD.Role_Admin))
+{
+    <div class="col-12 text-end mb-3">
+        <a asp-controller="Shop" asp-action="Add" class="btn btn-secondary"><i class="bi bi-plus-circle"></i> Add New </a>
+    </div>
+}
+<div class="container">
+    <div class="row justify-content-center">
+        @foreach (var obj in Model.ShopStores)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card d-flex flex-column justify-content-center align-items-center">
+                    <img src="~/@obj.ImgUrl" class="card-img-top img-fluid fixed-height" alt="Shop Image">
+                    @if (User.IsInRole(SD.Role_Admin))
+                    {
+                        <!-- Delete button for admin -->
+                        <a asp-controller="Shop" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger position-absolute top-0 end-0 m-2">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    }
+                    <div class="card-body text-center">
+                        <p class="card-text">
+                            <span style="color: green;">@obj.GenreName</span><br>
+                        </p>
+                        <h5 class="card-title">@obj.Name</h5>
+                        <p class="card-text">
+                            <span style="color: green; font-weight:bold; font-size:25px;">@obj.price <i class="bi bi-currency-dollar"></i></span>
+                        </p>
+                        <div class="w-90 btn-group" role="group">
+                            <a asp-controller="Shop" asp-action="Views" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                                <i class="bi bi-binoculars"></i> View
+                            </a>
+                            @if (!User.IsInRole(SD.Role_Admin))
+                            {
+                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@obj.Id" class="btn btn-success mx-2">
+                                    <i class="bi bi-cart"></i> Add To Cart
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

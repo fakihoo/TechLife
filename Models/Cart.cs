@@ -14,7 +14,6 @@ namespace TechLife.Models
         public int CartQuantity { get; set; }
         public double CartSubTotal { get; set;}
         public string ImgURL { get; set; }
-
         public int ShopId { get; set; }
         [ForeignKey("ShopId")]
         public Shop Shop { get; set; }

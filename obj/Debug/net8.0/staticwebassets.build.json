@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VTxNiSWEk9S3pqSNX0Ad08y1q/wCuzh6DdTSxO1Hz9k=",
+  "Hash": "U4D53fn0A7VphsPAGe2z5+e3OMlQ4I+SzvToULY1blw=",
   "Source": "TechLife",
   "BasePath": "_content/TechLife",
   "Mode": "Default",
@@ -5297,6 +5297,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\mtcintenet.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\OIG1.jfif",
+      "SourceId": "TechLife",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\",
+      "BasePath": "_content/TechLife",
+      "RelativePath": "img/OIG1.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\OIG1.jfif"
     },
     {
       "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\OIP.jpg",

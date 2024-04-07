@@ -14,6 +14,22 @@ namespace TechLife.Data
         public DbSet<ToDoList> ToDoLists { get; set; }
         public DbSet<SimService> SimServices { get; set; }
         public DbSet<SimServicesToDo> SimServiceToDos { get; set; }
+        public DbSet<ShopStore> ShopStores { get; set; }
+        public DbSet<CartDetail> CartDetails { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+
+
+
+
+
+
+
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
