@@ -86,9 +86,8 @@
                             </a>
                             @if (!User.IsInRole(SD.Role_Admin))
                             {
-                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@obj.Id" class="btn btn-success mx-2">
-                                    <i class="bi bi-cart"></i> Add To Cart
-                                </a>
+                                <button type="button" onclick="add(@obj.Id)" class="btn btn-primary">Add To Cart</button>
+                               
                             }
                         </div>
                     </div>
@@ -102,3 +101,29 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+@section scripts{
+    <script>
+        async function add(shopId){
+            var usernameEl = document.getElementById("username");
+            if (usernameEl == null) {
+                window.location.href = "/Identity/Account/Login";
+             //   var username = usernameEl.innerText;
+              //  if (username.length < 1) {
+
+              // }
+            }
+    try {
+               var response = await fetch(`/Customer/ShoppingCart/AddItem?shopId=${shopId}`);
+         if (response.status == 200) {
+            var result = await response.json();
+            var cartCountElement = document.getElementById("cartCount");
+            cartCountElement.innerHTML = result;
+             window.location.href = "#cartCount";
+         }
+    } catch (err) {
+        console.log(err);
+    }
+        }
+    </script>
+}

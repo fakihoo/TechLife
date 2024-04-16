@@ -5,8 +5,7 @@ namespace TechLife.Models
     public class CartDetail
     {
         public int Id { get; set; }
-        [Required]
-        public int ShoppingCart_Id { get; set; }
+        public int ShoppingCartId { get; set; }
         [Required]
         public int ShopStoreId { get; set; }
         public int Quantity { get; set; }

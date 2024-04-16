@@ -304,9 +304,6 @@ namespace TechLife.Migrations
                     b.Property<int>("ShoppingCartId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ShoppingCart_Id")
-                        .HasColumnType("int");
-
                     b.Property<double>("SubTotal")
                         .HasColumnType("float");
 
@@ -789,7 +786,7 @@ namespace TechLife.Migrations
                         .IsRequired();
 
                     b.HasOne("TechLife.Models.ShoppingCart", "ShoppingCart")
-                        .WithMany()
+                        .WithMany("CartDetails")
                         .HasForeignKey("ShoppingCartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -866,6 +863,11 @@ namespace TechLife.Migrations
                     b.Navigation("CartDetail");
 
                     b.Navigation("OrderDetail");
+                });
+
+            modelBuilder.Entity("TechLife.Models.ShoppingCart", b =>
+                {
+                    b.Navigation("CartDetails");
                 });
 #pragma warning restore 612, 618
         }
