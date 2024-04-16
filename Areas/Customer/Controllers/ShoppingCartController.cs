@@ -37,6 +37,16 @@ namespace TechLife.Areas.Customer.Controllers
             int cartItem = await _cartRepo.GetCartItemCount();
             return Ok(cartItem);
         }
+        public async Task<IActionResult> Checkout()
+        {
+            bool isCheckedOut = await _cartRepo.DoCheckout();
+            if (!isCheckedOut)
+            {
+                throw new Exception("Something Happened in server side");
+            }
+            return RedirectToAction("Index", "ShopStore");
+
+        }
 
     }
 }

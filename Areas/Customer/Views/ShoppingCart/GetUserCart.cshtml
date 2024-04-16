@@ -1,0 +1,60 @@
+﻿@model ShoppingCart
+
+<div class="container">
+    @if (Model != null && Model.CartDetails != null && Model.CartDetails.Count > 0)
+    {
+        <h1 class="my-5">Shopping Cart</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Genre</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model.CartDetails)
+                {
+                    <tr>
+                        <td><img src="~/@obj.ShopStore.ImgUrl" alt="@obj.ShopStore.Name" style="width: 50px; height: 50px;"></td>
+                        <td>@obj.ShopStore.Name</td>
+                        <td>@obj.ShopStore.Genre.GenreName</td>
+                        <td>$@obj.ShopStore.price</td>
+                        <td>@obj.Quantity</td>
+                        <td>@(obj.ShopStore.price*obj.Quantity)</td>
+                        <td>
+                            <a class="btn btn-info" href="/Customer/ShoppingCart/AddItem?shopId=@obj.ShopStoreId&&redirect=1">+</a>
+                            <a class="btn btn-info" href="/Customer/ShoppingCart/removeitem?shopId=@obj.ShopStoreId">-</a>
+
+                        </td>
+                        <td>
+                            <a asp-controller="Cart" asp-action="Delete" asp-route-id="@obj.ShoppingCartId" class="btn btn-danger float-md-end mx-2">
+                                <i class="bi bi-x-square-fill"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-end">Total</td>
+                    <td style="font-weight:bold;">@(Model.CartDetails.Select(obj => obj.ShopStore.price * obj.Quantity).Sum())</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+       
+        <div class="my-2">
+            <a class="btn btn-primary" href="/Customer/ShoppingCart/Checkout">Checkout</a>
+        </div>
+    }
+    else
+    {
+        <h5>Cart Is Empty</h5>
+    }
+</div>

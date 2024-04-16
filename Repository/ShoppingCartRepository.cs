@@ -65,7 +65,7 @@ namespace TechLife.Repository
             return cartItemCount;
         }
 
-        public async Task<int> RemoveItem(int shopStoreId)
+        public async Task<int> RemoveItem(int shopId)
         {
             string userId = GetUserId();
             try
@@ -80,7 +80,7 @@ namespace TechLife.Repository
                     throw new Exception("Invalid Cart");
                 }
                 //cart detail selection
-                var cartItem = _db.CartDetails.FirstOrDefault(a => a.ShoppingCartId == cart.Id && a.ShopStoreId == shopStoreId);
+                var cartItem = _db.CartDetails.FirstOrDefault(a => a.ShoppingCartId == cart.Id && a.ShopStoreId == shopId);
               if(cartItem is null )
                 {
                     throw new Exception("No items in cart");
@@ -128,6 +128,61 @@ namespace TechLife.Repository
                               select new { CartDetail.Id }
                               ).ToListAsync();
             return data.Count;
+        }
+        public async Task<bool> DoCheckout()
+        {
+            using var transaction = _db.Database.BeginTransaction();
+            try
+            {
+                //move data from cartDetail to ordr and order detail
+                var userId = GetUserId();
+                if(string.IsNullOrEmpty(userId))
+                {
+                    throw new Exception("User is not loged in");
+                }
+                var cart = await GetCart(userId);
+                if(cart is null)
+                {
+                    throw new Exception("Invalid Cart");
+                }
+                var cartDetail = _db.CartDetails.Where(a=>a.ShoppingCartId == cart.Id).ToList();
+                if (cartDetail.Count == 0)
+                {
+                    throw new Exception("Cart Is Empty");
+                }
+                var order = new Order
+                {
+                    UserId = userId,
+                    CreateDate = DateTime.UtcNow,
+                    OrderStatusId = 1 //pending
+
+                };
+                _db.Orders.Add(order);
+                _db.SaveChanges();
+
+                foreach (var item in cartDetail)
+                {
+                    var orderDetail = new OrderDetail
+                    {
+                        ShopStoreId = item.ShopStoreId,
+                        OrderId = order.Id,
+                        Quantity = item.Quantity,
+                        UnitPrice = item.SubTotal
+                    };
+                    _db.OrderDetails.Add(orderDetail);
+                }
+                    _db.SaveChanges();
+
+                    //removing Cart Detail
+                    _db.CartDetails.RemoveRange(cartDetail);
+                    _db.SaveChanges();
+                    transaction.Commit();
+                    return true;             
+            }
+            catch
+            {
+                return false;
+            }
         }
         private string GetUserId()
         {
