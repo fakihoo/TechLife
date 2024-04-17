@@ -29,6 +29,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddTransient<IShopStoreRepository, ShopStoreRepository>();
 builder.Services.AddTransient<IShoppingCartRepository, ShoppingCartRepository>();
+builder.Services.AddTransient<IUserOrderRepository, UserOrderRepository>();
+
 
 var app = builder.Build();
 

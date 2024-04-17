@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using System.Security.Claims;
 using TechLife.Data;
 using TechLife.Models;
+using TechLife.Models.DTOs;
 
 namespace TechLife.Repository
 {
@@ -118,18 +119,19 @@ namespace TechLife.Repository
         }
         public async Task<int> GetCartItemCount(string userId = "")
         {
-            if (!string.IsNullOrEmpty(userId))
+            if (string.IsNullOrEmpty(userId))
             {
                 userId = GetUserId();
             }
             var data = await (from ShoppingCart in _db.ShoppingCarts
                               join CartDetail in _db.CartDetails
-                              on ShoppingCart.Id equals CartDetail.ShoppingCartId   
+                              on ShoppingCart.Id equals CartDetail.ShoppingCartId
+                              where ShoppingCart.UserId == userId
                               select new { CartDetail.Id }
                               ).ToListAsync();
             return data.Count;
         }
-        public async Task<bool> DoCheckout()
+        public async Task<bool> DoCheckout(CheckoutModel model)
         {
             using var transaction = _db.Database.BeginTransaction();
             try
@@ -150,11 +152,22 @@ namespace TechLife.Repository
                 {
                     throw new Exception("Cart Is Empty");
                 }
+                var pendingRecord = _db.OrderStatuses.FirstOrDefault(s => s.StatusName == "Pending");
+                if(pendingRecord is null)
+                {
+                    throw new Exception("Order status does not have Pending Status");
+                }
                 var order = new Order
                 {
                     UserId = userId,
                     CreateDate = DateTime.UtcNow,
-                    OrderStatusId = 1 //pending
+                    Name = model.Name,
+                    Email = model.Email,
+                    MobileNumber = model.MobileNumber,
+                    PaymentMethod = model.PaymentMethod,
+                    Address = model.Address,
+                    IsPaid = false,
+                    OrderStatusId = pendingRecord.Id 
 
                 };
                 _db.Orders.Add(order);

@@ -39,8 +39,8 @@
                 <div class="col-auto ml-2">
                     @if (!User.IsInRole(SD.Role_Admin))
                     {
-                        <a asp-controller="Cart" asp-action="Index" class="btn btn-success">
-                            <i class="bi bi-bag"></i> Cart
+                        <a asp-controller="UserOrder" asp-action="UserOrders" class="btn btn-success">
+                            <i class="bi bi-bag"></i> My Orders
                         </a>
                     }
                 </div>

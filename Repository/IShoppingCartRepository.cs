@@ -1,4 +1,5 @@
 ﻿using TechLife.Models;
+using TechLife.Models.DTOs;
 
 namespace TechLife.Repository
 {
@@ -10,7 +11,7 @@ namespace TechLife.Repository
         Task<int> GetCartItemCount(string userId = "");
 
         Task<ShoppingCart> GetCart(string userId);
-        Task<bool> DoCheckout();
+        Task<bool> DoCheckout(CheckoutModel model);
 
 
     }
