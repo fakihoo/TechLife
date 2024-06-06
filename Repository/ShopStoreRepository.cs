@@ -22,6 +22,10 @@ namespace TechLife.Repository
             IEnumerable<ShopStore> ShopStores =  await (from ShopStore in _db.ShopStores
                               join genre in _db.Genres
                               on ShopStore.GenreId equals genre.Id
+                              join stock in _db.Stocks
+                              on ShopStore.Id equals stock.ShopStoreId
+                              into book_stocks
+                              from bookWithStock in book_stocks.DefaultIfEmpty()
                               where string.IsNullOrWhiteSpace(sterm) || (ShopStore!=null && ShopStore.Name.ToLower().StartsWith(sterm))
                               select new ShopStore
                               {
@@ -31,9 +35,9 @@ namespace TechLife.Repository
                                   Description = ShopStore.Description,
                                   GenreId = ShopStore.GenreId,
                                   price = ShopStore.price,
-                                  Quantity = ShopStore.Quantity,
                                   discount = ShopStore.discount,
-                                  GenreName = ShopStore.GenreName
+                                  GenreName = ShopStore.GenreName,
+                                  Quantity = bookWithStock == null ? 0 : bookWithStock.Quantity
 
                               }
 

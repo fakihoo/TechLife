@@ -22,6 +22,7 @@ namespace TechLife.Data
         public DbSet<Genre> Genres { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
+        public DbSet<Stock> Stocks { get; set; }
 
 
 
@@ -54,6 +55,13 @@ namespace TechLife.Data
                 new SimService { SimServiceId = 3, SimServiceName = "4.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 4, SimType = "Alfa",ImgUrl= "~/img/Untitled-6.jpg" },
                 new SimService { SimServiceId = 4, SimServiceName = "7.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 7, SimType = "Alfa" , ImgUrl = "~/img/1fd2fc9d-e1ac-4c1e-9c07-1d78f99055cb.jpg" }
                 );
+            modelBuilder.Entity<ShopStore>()
+                .HasOne(s => s.Stock)
+                .WithOne(s => s.ShopStore)
+                .HasForeignKey<Stock>(s => s.ShopStoreId);
+                
+
+            base.OnModelCreating(modelBuilder);
         }
 
         

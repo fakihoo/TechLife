@@ -26,7 +26,7 @@ namespace TechLife.Repository
             try
             {
                 if (string.IsNullOrEmpty(userId))
-                    throw new Exception("user is not logged-in");
+                    throw new UnauthorizedAccessException("user is not logged-in");
                 var cart = await GetCart(userId);
                 if (cart is null)
                 {
@@ -73,18 +73,18 @@ namespace TechLife.Repository
             {             
                 if (string.IsNullOrEmpty(userId))
                 {
-                    throw new Exception("user is not logged in");
+                    throw new UnauthorizedAccessException("user is not logged in");
                 }
                 var cart = await GetCart(userId);
                 if (cart is null)
                 {
-                    throw new Exception("Invalid Cart");
+                    throw new InvalidOperationException("Invalid Cart");
                 }
                 //cart detail selection
                 var cartItem = _db.CartDetails.FirstOrDefault(a => a.ShoppingCartId == cart.Id && a.ShopStoreId == shopId);
               if(cartItem is null )
                 {
-                    throw new Exception("No items in cart");
+                    throw new InvalidOperationException("No items in cart");
                 }
                 else if(cartItem.Quantity == 1)
                 {
@@ -107,9 +107,16 @@ namespace TechLife.Repository
             var userId = GetUserId();
             if(userId == null)
             {
-                throw new Exception("Invalid UserId");
+                throw new InvalidOperationException("Invalid UserId");
             }
-            var shoppingCart = await _db.ShoppingCarts.Include(a => a.CartDetails).ThenInclude(a => a.ShopStore).ThenInclude(a => a.Genre).Where(a => a.UserId == userId).FirstOrDefaultAsync();
+            var shoppingCart = await _db.ShoppingCarts
+                .Include(a => a.CartDetails)
+                                  .ThenInclude(a => a.ShopStore)
+                                  .ThenInclude(a => a.Stock)
+                                  .Include(a => a.CartDetails)
+                                  .ThenInclude(a => a.ShopStore)
+                                  .ThenInclude(a => a.Genre)
+                                  .Where(a => a.UserId == userId).FirstOrDefaultAsync();
             return shoppingCart;
         }
         public async Task<ShoppingCart> GetCart(string userId)
@@ -140,17 +147,17 @@ namespace TechLife.Repository
                 var userId = GetUserId();
                 if(string.IsNullOrEmpty(userId))
                 {
-                    throw new Exception("User is not loged in");
+                    throw new UnauthorizedAccessException("User is not loged in");
                 }
                 var cart = await GetCart(userId);
                 if(cart is null)
                 {
-                    throw new Exception("Invalid Cart");
+                    throw new InvalidOperationException("Invalid Cart");
                 }
                 var cartDetail = _db.CartDetails.Where(a=>a.ShoppingCartId == cart.Id).ToList();
                 if (cartDetail.Count == 0)
                 {
-                    throw new Exception("Cart Is Empty");
+                    throw new InvalidOperationException("Cart Is Empty");
                 }
                 var pendingRecord = _db.OrderStatuses.FirstOrDefault(s => s.StatusName == "Pending");
                 if(pendingRecord is null)
@@ -183,8 +190,22 @@ namespace TechLife.Repository
                         UnitPrice = item.SubTotal
                     };
                     _db.OrderDetails.Add(orderDetail);
+
+                    //updating the stock quantity
+                    var stock = await _db.Stocks.FirstOrDefaultAsync(a => a.ShopStoreId == item.ShopStoreId);
+                    if (stock == null)
+                    {
+                        throw new InvalidOperationException("Stock is null");
+                    }
+
+                    if (item.Quantity > stock.Quantity)
+                    {
+                        throw new InvalidOperationException($"Only {stock.Quantity} items(s) are available in the stock");
+                    }
+                    // decrease the number of quantity from the stock table
+                    stock.Quantity -= item.Quantity;
                 }
-                    _db.SaveChanges();
+                   // _db.SaveChanges();
 
                     //removing Cart Detail
                     _db.CartDetails.RemoveRange(cartDetail);

@@ -28,7 +28,17 @@
                         <td>@obj.Quantity</td>
                         <td>@(obj.ShopStore.price*obj.Quantity)</td>
                         <td>
-                            <a class="btn btn-info" href="/Customer/ShoppingCart/AddItem?shopId=@obj.ShopStoreId&&redirect=1">+</a>
+                            @* Increase Quantity button should be invisible if not enough stock*@
+                            @if (obj.Quantity < obj.ShopStore.Stock.Quantity)
+                            {
+                                <a class="btn btn-info" href="/Customer/ShoppingCart/AddItem?shopId=@obj.ShopStoreId&&redirect=1">+</a>
+
+                            }
+                            else
+                            {
+                                <span style="border: 1px solid;padding: 8px 8px;color: red;border-radius: 5px;margin-right:4px">Out of stock </span>
+                            }
+                            @* Decrement button *@
                             <a class="btn btn-info" href="/Customer/ShoppingCart/removeitem?shopId=@obj.ShopStoreId">-</a>
 
                         </td>
