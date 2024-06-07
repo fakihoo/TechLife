@@ -10,12 +10,12 @@
             <div class="inner">
                 <h3>Tech Life</h3>
 
-                <p>Add Items to Shop</p>
+                <p>Manage Shop Items</p>
             </div>
             <div class="icon">
                 <i class="ion ion-bag"></i>
             </div>
-            <a asp-area="Customer" asp-controller="Shop" asp-action="Add" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a asp-area="Admin" asp-controller="ShopItem" asp-action="Index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -49,20 +49,6 @@
         </div>
     </div>
     <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-            <div class="inner">
-                <h3>Tech Life</h3>
-
-                <p>Delete Items From Shop</p>
-            </div>
-            <div class="icon">
-                <i class="bi bi-trash-fill"></i>
-            </div>
-            <a asp-area="Customer" asp-controller="Shop" asp-action="Index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
     <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box bg-secondary">
@@ -120,4 +106,19 @@
         </div>
     </div>
     <!-- ./col -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>Tech Life</h3>
+
+                    <p>Manage Genres</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a asp-area="Admin" asp-controller="Genre" asp-action="Index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
 </div>

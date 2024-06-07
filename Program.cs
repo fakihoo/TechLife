@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using TechLife;
 using Microsoft.Extensions.Options;
 using Stripe;
+using TechLife.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,12 @@ builder.Services.AddTransient<IShopStoreRepository, ShopStoreRepository>();
 builder.Services.AddTransient<IShoppingCartRepository, ShoppingCartRepository>();
 builder.Services.AddTransient<IUserOrderRepository, UserOrderRepository>();
 builder.Services.AddTransient<IStockRepository, StockRepository>();
+builder.Services.AddTransient<IGenreRepository, GenreRepository>();
+builder.Services.AddTransient<IFileService, TechLife.Shared.FileService>();
+builder.Services.AddTransient<IShopItemRepository, ShopItemRepository>();
+
+
+
 
 
 
