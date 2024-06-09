@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K3Rv96bmmk2YeS/U+nAFkF5mTzoNWBTbQB3o/NibGIY=",
+  "Hash": "fy4r1IXOleil5ku9udEANeG2Afo6nxUuYrfK9PQwYdo=",
   "Source": "TechLife",
   "BasePath": "_content/TechLife",
   "Mode": "Default",
@@ -4862,6 +4862,25 @@
       "OriginalItemSpec": "wwwroot\\img\\09fe6c7b-ae5e-4429-946a-888f5cdcbc6b.jpg"
     },
     {
+      "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\0dc853b7-c576-4710-95b8-0cdd48e229c5.jpg",
+      "SourceId": "TechLife",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\",
+      "BasePath": "_content/TechLife",
+      "RelativePath": "img/0dc853b7-c576-4710-95b8-0cdd48e229c5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\0dc853b7-c576-4710-95b8-0cdd48e229c5.jpg"
+    },
+    {
       "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\1657112223214_image.webp",
       "SourceId": "TechLife",
       "SourceType": "Discovered",
@@ -4900,6 +4919,25 @@
       "OriginalItemSpec": "wwwroot\\img\\219e57df-4e58-4f9a-8a22-873710dda00e.jpg"
     },
     {
+      "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\2423dba3-d480-4985-9d5e-c49a95d6a442.jpg",
+      "SourceId": "TechLife",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\",
+      "BasePath": "_content/TechLife",
+      "RelativePath": "img/2423dba3-d480-4985-9d5e-c49a95d6a442.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\2423dba3-d480-4985-9d5e-c49a95d6a442.jpg"
+    },
+    {
       "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\29710ed2-76e7-4d9c-9413-0a91a55a0c5c.jpg",
       "SourceId": "TechLife",
       "SourceType": "Discovered",
@@ -4917,6 +4955,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\29710ed2-76e7-4d9c-9413-0a91a55a0c5c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\3891d5f6-ec20-41c5-b78e-45f80d9819ef.jpg",
+      "SourceId": "TechLife",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\",
+      "BasePath": "_content/TechLife",
+      "RelativePath": "img/3891d5f6-ec20-41c5-b78e-45f80d9819ef.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\3891d5f6-ec20-41c5-b78e-45f80d9819ef.jpg"
     },
     {
       "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\4.5Mtc.png",
@@ -4993,6 +5050,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\90444da6-bcde-42b6-8acc-913d65806b44.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\977ceb66-c945-40b0-8d19-98f7447b4b09.jpg",
+      "SourceId": "TechLife",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\",
+      "BasePath": "_content/TechLife",
+      "RelativePath": "img/977ceb66-c945-40b0-8d19-98f7447b4b09.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\977ceb66-c945-40b0-8d19-98f7447b4b09.jpg"
     },
     {
       "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\apple-laptop-lineup-20220825-3-medium.jpg",
@@ -5164,6 +5240,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\db044eff-1e39-4804-bf44-97e139694ef7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\dc2bfaf9-4d51-4637-9afb-dda269e607ef.jpg",
+      "SourceId": "TechLife",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\",
+      "BasePath": "_content/TechLife",
+      "RelativePath": "img/dc2bfaf9-4d51-4637-9afb-dda269e607ef.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\dc2bfaf9-4d51-4637-9afb-dda269e607ef.jpg"
     },
     {
       "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\Depositphotos_79186832_original.jpg",

@@ -36,6 +36,8 @@ builder.Services.AddTransient<IStockRepository, StockRepository>();
 builder.Services.AddTransient<IGenreRepository, GenreRepository>();
 builder.Services.AddTransient<IFileService, TechLife.Shared.FileService>();
 builder.Services.AddTransient<IShopItemRepository, ShopItemRepository>();
+builder.Services.AddTransient<IReportRepository, ReportRepository>();
+
 
 
 
