@@ -8,6 +8,7 @@ using TechLife;
 using Microsoft.Extensions.Options;
 using Stripe;
 using TechLife.Shared;
+using TechLife.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,11 +39,8 @@ builder.Services.AddTransient<IFileService, TechLife.Shared.FileService>();
 builder.Services.AddTransient<IShopItemRepository, ShopItemRepository>();
 builder.Services.AddTransient<IReportRepository, ReportRepository>();
 
-
-
-
-
-
+builder.Services.AddTransient<StripeService>();
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
 var app = builder.Build();
 
@@ -59,7 +57,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -67,7 +65,6 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapControllers();
 app.MapControllerRoute(
-    name: "default",
+   name: "default",
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
-
 app.Run();

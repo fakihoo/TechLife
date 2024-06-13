@@ -173,7 +173,7 @@ namespace TechLife.Repository
                     MobileNumber = model.MobileNumber,
                     PaymentMethod = model.PaymentMethod,
                     Address = model.Address,
-                    IsPaid = false,
+                    IsPaid = model.PaymentMethod == "Online",
                     OrderStatusId = pendingRecord.Id 
 
                 };
