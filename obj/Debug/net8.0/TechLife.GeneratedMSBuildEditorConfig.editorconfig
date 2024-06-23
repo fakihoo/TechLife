@@ -58,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/Report/TopBuyersByOrderCount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVwb3J0XFRvcEJ1eWVyc0J5T3JkZXJDb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/Report/TopBuyersByTotalAmountSpent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVwb3J0XFRvcEJ1eWVyc0J5VG90YWxBbW91bnRTcGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/Report/TopFiveSellingBooks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVwb3J0XFRvcEZpdmVTZWxsaW5nQm9va3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -160,6 +168,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/USER/source/repos/TechLife/TechLife/Areas/Customer/Views/ShoppingCart/OrderSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hvcHBpbmdDYXJ0XE9yZGVyU3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Customer/Views/ShoppingCart/OrderSuccessCOD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hvcHBpbmdDYXJ0XE9yZGVyU3VjY2Vzc0NPRC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/USER/source/repos/TechLife/TechLife/Areas/Customer/Views/ShopStore/Index.cshtml]

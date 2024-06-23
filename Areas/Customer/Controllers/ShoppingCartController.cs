@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using FluentEmail.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Stripe;
 using Stripe.Checkout;
 using System.Text.Json;
+using TechLife.EmailServices;
 using TechLife.Models.DTOs;
 using TechLife.Repository;
 using TechLife.Utility;
@@ -98,7 +100,7 @@ namespace TechLife.Areas.Customer.Controllers
             {
                 return RedirectToAction(nameof(OrderFailure));
             }
-            return RedirectToAction(nameof(OrderSuccess));
+            return RedirectToAction(nameof(OrderSuccessCOD));
         }
         [HttpGet]
         public async Task<IActionResult> OrderSuccess(string session_id)
@@ -147,6 +149,10 @@ namespace TechLife.Areas.Customer.Controllers
 
 
         public IActionResult OrderFailure()
+        {
+            return View();
+        }
+        public IActionResult OrderSuccessCOD()
         {
             return View();
         }

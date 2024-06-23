@@ -282,3 +282,8 @@ C:\Users\USER\source\repos\TechLife\TechLife\bin\Debug\net8.0\runtimes\win-x86\n
 C:\Users\USER\source\repos\TechLife\TechLife\obj\Debug\net8.0\TechLife.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\USER\source\repos\TechLife\TechLife\obj\Debug\net8.0\TechLife.sourcelink.json
 C:\Users\USER\source\repos\TechLife\TechLife\bin\Debug\net8.0\Stripe.net.dll
+C:\Users\USER\source\repos\TechLife\TechLife\bin\Debug\net8.0\FluentEmail.Core.dll
+C:\Users\USER\source\repos\TechLife\TechLife\bin\Debug\net8.0\FluentEmail.Razor.dll
+C:\Users\USER\source\repos\TechLife\TechLife\bin\Debug\net8.0\FluentEmail.Smtp.dll
+C:\Users\USER\source\repos\TechLife\TechLife\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\USER\source\repos\TechLife\TechLife\bin\Debug\net8.0\RazorLight.dll

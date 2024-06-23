@@ -38,7 +38,7 @@
                                     @foreach (var obj in order.OrderDetail)
                                     {
                                         <tr>
-                                            <td><img src="~/@obj.ShopStore.ImgUrl" alt="@obj.ShopStore.Name" style="width: 50px; height: 50px;"></td>
+                                            <td><img src="~/img/@obj.ShopStore.ImgUrl" alt="@obj.ShopStore.Name" style="width: 50px; height: 50px;"></td>
                                             <td>@obj.ShopStore.Name</td>
                                             <td>$@obj.ShopStore.price</td>
                                             <td>@obj.Quantity</td>

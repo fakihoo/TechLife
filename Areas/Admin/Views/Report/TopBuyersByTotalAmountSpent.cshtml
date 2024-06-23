@@ -1,0 +1,81 @@
+﻿@using TechLife.Models.DTOs
+@model List<TopBuyer>
+@{
+    Layout = "_AdminLayout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Buyers</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            width: 100%; /* Full width */
+            max-width: 600px; /* Max width for large screens */
+            margin: 0 auto; /* Center the chart */
+        }
+        canvas {
+            width: 100% !important; /* Ensure canvas is responsive */
+            height: auto !important; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <h2>Top Buyers by Total Amount Spent</h2>
+    <div class="chart-container">
+        <canvas id="topBuyersChart"></canvas>
+    </div>
+
+    <h3>Top Buyers List</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Total Amount Spent</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var buyer in Model)
+            {
+                <tr>
+                    <td>@buyer.Name</td>
+                    <td>@buyer.Email</td>
+                    <td>@buyer.Address</td>
+                    <td>@buyer.TotalAmountSpent</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script>
+        var ctx = document.getElementById('topBuyersChart').getContext('2d');
+        var chartData = {
+            labels: @Html.Raw(Json.Serialize(Model.Select(b => b.Name))),
+            datasets: [{
+                label: 'Total Amount Spent',
+                data: @Html.Raw(Json.Serialize(Model.Select(b => b.TotalAmountSpent))),
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var topBuyersChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

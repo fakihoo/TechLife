@@ -1,0 +1,97 @@
+﻿@using TechLife.Models.DTOs
+@model List<TopBuyer>
+@{
+    Layout = "_AdminLayout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Buyers</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            width: 100%; /* Full width */
+            max-width: 600px; /* Max width for large screens */
+            margin: 20px auto; /* Center the chart */
+        }
+
+        canvas {
+            width: 100% !important; /* Ensure canvas is responsive */
+            height: auto !important; /* Maintain aspect ratio */
+            max-width: 600px; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Top Buyers by Order Count</h2>
+    <div class="chart-container">
+        <canvas id="topBuyersChart" style="max-height: 400px;"></canvas>
+    </div>
+
+    <h3>Top Buyers List</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Order Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var buyer in Model.Take(5))
+            {
+                <tr>
+                    <td>@buyer.Name</td>
+                    <td>@buyer.Email</td>
+                    <td>@buyer.Address</td>
+                    <td>@buyer.OrderCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script>
+        var ctx = document.getElementById('topBuyersChart').getContext('2d');
+        var chartData = {
+            labels: @Html.Raw(Json.Serialize(Model.Take(5).Select(b => b.Name))),
+            datasets: [{
+                label: 'Order Count',
+                data: @Html.Raw(Json.Serialize(Model.Take(5).Select(b => b.OrderCount))),
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        var topBuyersChart = new Chart(ctx, {
+            type: 'polarArea',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

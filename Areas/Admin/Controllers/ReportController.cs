@@ -32,5 +32,16 @@ namespace TechLife.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
+        public async Task<IActionResult> TopBuyersByOrderCount(int topN = 10)
+        {
+            var topBuyers = await _reportRepository.GetTopBuyersByOrderCount(topN);
+            return View(topBuyers);
+        }
+
+        public async Task<IActionResult> TopBuyersByTotalAmountSpent(int topN = 10)
+        {
+            var topBuyers = await _reportRepository.GetTopBuyersByTotalAmountSpent(topN);
+            return View(topBuyers);
+        }
     }
 }

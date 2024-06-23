@@ -100,7 +100,7 @@
                 <p>Manage Shop Orders</p>
             </div>
             <div class="icon">
-                <i class="bi bi-shop-window"></i>
+                <i class="bi bi-shop"></i>
             </div>
             <a asp-area="Admin" asp-controller="AdminOperations" asp-action="AllOrders" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
@@ -128,9 +128,37 @@
                 <p>Top Sales</p>
             </div>
             <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="bi bi-receipt"></i>
             </div>
             <a asp-area="Admin" asp-controller="Report" asp-action="TopFiveSellingBooks" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>Tech Life</h3>
+
+                <p>Top Customers</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-person-circle"></i>
+            </div>
+            <a asp-area="Admin" asp-controller="Report" asp-action="TopBuyersByOrderCount" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>Tech Life</h3>
+
+                <p>Top Spenders</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-currency-dollar"></i>
+            </div>
+            <a asp-area="Admin" asp-controller="Report" asp-action="TopBuyersByTotalAmountSpent" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
 </div>

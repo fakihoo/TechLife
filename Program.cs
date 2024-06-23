@@ -9,6 +9,10 @@ using Microsoft.Extensions.Options;
 using Stripe;
 using TechLife.Shared;
 using TechLife.Utility;
+using System.Net.Mail;
+using System.Net;
+using FluentEmail.Core;
+using TechLife.EmailServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +42,7 @@ builder.Services.AddTransient<IGenreRepository, GenreRepository>();
 builder.Services.AddTransient<IFileService, TechLife.Shared.FileService>();
 builder.Services.AddTransient<IShopItemRepository, ShopItemRepository>();
 builder.Services.AddTransient<IReportRepository, ReportRepository>();
+
 
 builder.Services.AddTransient<StripeService>();
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
