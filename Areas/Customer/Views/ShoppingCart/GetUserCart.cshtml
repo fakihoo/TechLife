@@ -24,9 +24,9 @@
                         <td><img src="~/img/@obj.ShopStore.ImgUrl" alt="@obj.ShopStore.Name" style="width: 50px; height: 50px;"></td>
                         <td>@obj.ShopStore.Name</td>
                         <td>@obj.ShopStore.Genre.GenreName</td>
-                        <td>$@obj.ShopStore.price</td>
+                        <td>$@obj.ShopStore.DiscountedPrice</td>
                         <td>@obj.Quantity</td>
-                        <td>@(obj.ShopStore.price*obj.Quantity)</td>
+                        <td>@(obj.ShopStore.DiscountedPrice*obj.Quantity)</td>
                         <td>
                             @* Increase Quantity button should be invisible if not enough stock*@
                             @if (obj.Quantity < obj.ShopStore.Stock.Quantity)
@@ -53,7 +53,7 @@
             <tfoot>
                 <tr>
                     <td colspan="4" class="text-end">Total</td>
-                    <td style="font-weight:bold;">@(Model.CartDetails.Select(obj => obj.ShopStore.price * obj.Quantity).Sum())</td>
+                    <td style="font-weight:bold;">@(Model.CartDetails.Select(obj => obj.ShopStore.DiscountedPrice * obj.Quantity).Sum())</td>
                     <td></td>
                 </tr>
             </tfoot>

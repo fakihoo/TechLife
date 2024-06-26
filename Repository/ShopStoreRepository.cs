@@ -48,5 +48,24 @@ namespace TechLife.Repository
             }
             return ShopStores;
         }
+        public async Task<ShopStore> GetByIdAsync(int id)
+        {
+            return await _db.ShopStores.FindAsync(id);
+        }
+
+        public async Task UpdateDiscountAsync(int id, double discount)
+        {
+            var shopStore = await _db.ShopStores.FindAsync(id);
+            if (shopStore != null)
+            {
+                shopStore.discount = discount;
+                await _db.SaveChangesAsync();
+            }
+        }
+
+        public async Task<bool> ExistsAsync(int id)
+        {
+            return await _db.ShopStores.AnyAsync(e => e.Id == id);
+        }
     }
 }

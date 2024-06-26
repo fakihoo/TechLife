@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TechLife.Models.SupplierItem>
+
+@{
+    ViewBag.Title = "Supplier Details";
+}
+
+<h2>Supplier: @ViewBag.SupplierName</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShopStore.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShopStore.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PurchaseDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SupplierItemId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.SupplierItemId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SupplierItemId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Back to Suppliers", "Index")
+</p>

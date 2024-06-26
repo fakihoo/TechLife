@@ -23,6 +23,13 @@ namespace TechLife.Data
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
         public DbSet<Stock> Stocks { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<SupplierItem> SupplierItems { get; set; }
+
+
+
+
+
 
 
 
@@ -62,6 +69,24 @@ namespace TechLife.Data
                 
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Supplier>()
+       .HasMany(s => s.SupplierItems)
+       .WithOne(si => si.Supplier)
+       .HasForeignKey(si => si.SupplierId)
+       .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<SupplierItem>()
+                .HasOne(si => si.Supplier)
+                .WithMany(s => s.SupplierItems)
+                .HasForeignKey(si => si.SupplierId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Stock>()
+                .HasOne(s => s.SupplierItem)
+                .WithMany(si => si.Stocks)
+                .HasForeignKey(s => s.SupplierItemId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         

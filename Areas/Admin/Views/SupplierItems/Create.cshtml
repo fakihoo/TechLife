@@ -1,0 +1,67 @@
+﻿@model TechLife.Models.SupplierItem
+
+@{
+    ViewData["Title"] = "Create Supplier Item";
+}
+
+<h2>Create Supplier Item</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-horizontal">
+        <h4>Supplier Item</h4>
+        <hr />
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="SupplierId" class="control-label">Supplier</label>
+            <select asp-for="SupplierId" asp-items='new SelectList(ViewBag.Suppliers, "SupplierId", "Name")' class="form-control">
+                <option value="">Select Supplier</option>
+            </select>
+            <span asp-validation-for="SupplierId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ShopStoreId" class="control-label">Shop Store</label>
+            <select asp-for="ShopStoreId" asp-items='new SelectList(ViewBag.ShopStores, "Id", "Name")' class="form-control">
+                <option value="">Select Shop Store</option>
+            </select>
+            <span asp-validation-for="ShopStoreId" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="PurchaseDate" class="control-label col-md-2">Purchase Date</label>
+            <div class="col-md-10">
+                <input asp-for="PurchaseDate" class="form-control" />
+                <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Quantity" class="control-label col-md-2">Quantity</label>
+            <div class="col-md-10">
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price" class="control-label col-md-2">Price</label>
+            <div class="col-md-10">
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-default">Create</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

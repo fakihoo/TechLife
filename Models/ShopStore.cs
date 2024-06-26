@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Stripe;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TechLife.Models
@@ -12,6 +13,7 @@ namespace TechLife.Models
         public string? Name { get; set; }
         public string ImgUrl { get; set; }
         public double price { get; set; }
+        [Range(0, 100, ErrorMessage = "Discount must be between 0 and 100.")]
         public double discount { get; set; }
         public string Description { get; set; }
         public int Quantity { get; set; }
@@ -23,6 +25,8 @@ namespace TechLife.Models
         public Stock Stock { get; set; }
         [NotMapped]
         public string GenreName { get; set; }
+        [NotMapped]
+        public double DiscountedPrice => price - (price * (discount / 100));
 
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechLife.Data;
 
@@ -11,9 +12,11 @@ using TechLife.Data;
 namespace TechLife.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240624193822_AddSuppliers")]
+    partial class AddSuppliers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -774,7 +777,7 @@ namespace TechLife.Migrations
 
                     b.HasKey("SupplierId");
 
-                    b.ToTable("Suppliers");
+                    b.ToTable("Supplier");
                 });
 
             modelBuilder.Entity("TechLife.Models.SupplierItem", b =>
@@ -785,21 +788,19 @@ namespace TechLife.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierItemId"));
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<DateTime>("PurchaseDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<decimal>("PurchasePrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ShopStoreId")
-                        .IsRequired()
+                    b.Property<int>("ShopStoreId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SupplierId")
-                        .IsRequired()
+                    b.Property<int>("SupplierId")
                         .HasColumnType("int");
 
                     b.HasKey("SupplierItemId");
@@ -808,7 +809,7 @@ namespace TechLife.Migrations
 
                     b.HasIndex("SupplierId");
 
-                    b.ToTable("SupplierItems");
+                    b.ToTable("SupplierItem");
                 });
 
             modelBuilder.Entity("TechLife.Models.ToDoList", b =>

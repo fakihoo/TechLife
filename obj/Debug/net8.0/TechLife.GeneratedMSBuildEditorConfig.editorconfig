@@ -102,6 +102,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RvY2tcTWFuYWdlU3RvY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/SupplierItems/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJJdGVtc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/SupplierItems/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJJdGVtc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/Suppliers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/Suppliers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/Suppliers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/Suppliers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/USER/source/repos/TechLife/TechLife/Areas/Admin/Views/ToDoList/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9Eb0xpc3RcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -172,6 +196,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/USER/source/repos/TechLife/TechLife/Areas/Customer/Views/ShoppingCart/OrderSuccessCOD.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hvcHBpbmdDYXJ0XE9yZGVyU3VjY2Vzc0NPRC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/source/repos/TechLife/TechLife/Areas/Customer/Views/ShopStore/EditDiscount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hvcFN0b3JlXEVkaXREaXNjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/USER/source/repos/TechLife/TechLife/Areas/Customer/Views/ShopStore/Index.cshtml]

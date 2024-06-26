@@ -52,7 +52,7 @@ namespace TechLife.Repository
                         ShopStoreId = shopId,
                         ShoppingCartId = cart.Id,
                         Quantity = qty,
-                        SubTotal = book.price  // it is a new line after update
+                        SubTotal = qty * book.DiscountedPrice // it is a new line after update
                     };
                     _db.CartDetails.Add(cartItem);
                 }

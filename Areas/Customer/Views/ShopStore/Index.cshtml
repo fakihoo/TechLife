@@ -9,6 +9,27 @@
         height: 200px;
         object-fit: cover;
     }
+
+    .discounted-price {
+        color: red;
+        text-decoration: line-through;
+    }
+
+    .final-price {
+        color: green;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .discount-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: red;
+        color: white;
+        padding: 5px;
+        border-radius: 0 0 5px 5px;
+    }
 </style>
 
 <div class="container">
@@ -24,14 +45,14 @@
                         <option selected>Search By Category</option>
                         @foreach (var genre in Model.Genres)
                         {
-                            <option selected="@(genre.Id == Model.GenreId)"value="@genre.Id">@genre.GenreName</option>
+                            <option selected="@(genre.Id == Model.GenreId)" value="@genre.Id">@genre.GenreName</option>
                         }
                     </select>
                 </div>
                 <div class="col-auto">
                     <label class="visually-hidden" for="sterm">Search</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" value="@Model.STerm"id="sterm" name="sterm" placeholder="Search" />
+                        <input type="text" class="form-control" value="@Model.STerm" id="sterm" name="sterm" placeholder="Search" />
                         <button type="submit" class="btn btn-primary">Search</button>
                         <a asp-controller="ShopStore" asp-action="Index" class="btn btn-primary"><i class="bi bi-arrow-clockwise"></i></a>
                     </div>
@@ -63,13 +84,24 @@
         @foreach (var obj in Model.ShopStores)
         {
             <div class="col-md-4 mb-3">
-                <div class="card d-flex flex-column justify-content-center align-items-center">
+                <div class="card d-flex flex-column justify-content-center align-items-center position-relative">
                     <img src="~/img/@obj.ImgUrl" class="card-img-top img-fluid fixed-height" alt="Shop Image">
+                    @if (obj.discount > 0)
+                    {
+                        <span class="discount-badge">@obj.discount% OFF</span>
+                    }
                     @if (User.IsInRole(SD.Role_Admin))
                     {
                         <!-- Delete button for admin -->
                         <a asp-controller="Shop" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger position-absolute top-0 end-0 m-2">
                             <i class="bi bi-trash"></i>
+                        </a>
+                    }
+                    @if (User.IsInRole(SD.Role_Admin))
+                    {
+                        <!-- Add discount button for admin -->
+                        <a asp-controller="ShopStore" asp-action="EditDiscount" asp-route-id="@obj.Id" class="btn btn-warning position-absolute top-0 start-0 m-2">
+                            <i class="bi bi-tags"></i> Discount
                         </a>
                     }
                     <div class="card-body text-center">
@@ -78,7 +110,16 @@
                         </p>
                         <h5 class="card-title">@obj.Name</h5>
                         <p class="card-text">
-                            <span style="color: green; font-weight:bold; font-size:25px;">@obj.price <i class="bi bi-currency-dollar"></i></span>
+                            @if (obj.discount > 0)
+                            {
+                                <span class="discounted-price">@obj.price <i class="bi bi-currency-dollar"></i></span>
+                                <br />
+                                <span class="final-price">@obj.DiscountedPrice <i class="bi bi-currency-dollar"></i></span>
+                            }
+                            else
+                            {
+                                <span class="final-price">@obj.price <i class="bi bi-currency-dollar"></i></span>
+                            }
                         </p>
                         <div class="w-90 btn-group" role="group">
                             <a asp-controller="Shop" asp-action="Views" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
@@ -86,7 +127,8 @@
                             </a>
                             @if (!User.IsInRole(SD.Role_Admin))
                             {
-                                @if(obj.Quantity>0){
+                                @if (obj.Quantity > 0)
+                                {
                                     <button type="button" onclick="add(@obj.Id)" class="btn btn-primary">Add To Cart</button>
                                 }
                                 else
@@ -102,33 +144,28 @@
     </div>
 </div>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-@section scripts{
+@section scripts {
     <script>
-        async function add(shopId){
+        async function add(shopId) {
             var usernameEl = document.getElementById("username");
             if (usernameEl == null) {
                 window.location.href = "/Identity/Account/Login";
-             //   var username = usernameEl.innerText;
-              //  if (username.length < 1) {
-
-              // }
             }
-    try {
-               var response = await fetch(`/Customer/ShoppingCart/AddItem?shopId=${shopId}`);
-         if (response.status == 200) {
-            var result = await response.json();
-            var cartCountElement = document.getElementById("cartCount");
-            cartCountElement.innerHTML = result;
-             window.location.href = "#cartCount";
-         }
-    } catch (err) {
-        console.log(err);
-    }
+            try {
+                var response = await fetch(`/Customer/ShoppingCart/AddItem?shopId=${shopId}`);
+                if (response.status == 200) {
+                    var result = await response.json();
+                    var cartCountElement = document.getElementById("cartCount");
+                    cartCountElement.innerHTML = result;
+                    window.location.href = "#cartCount";
+                }
+            } catch (err) {
+                console.log(err);
+            }
         }
     </script>
 }

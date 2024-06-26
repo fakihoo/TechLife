@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechLife")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a5553fd3d61b37465989ebb3bd05efa3888e29a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2228a57da8a1f082dee4d28d1e943c4dc7ca9fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechLife")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechLife")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

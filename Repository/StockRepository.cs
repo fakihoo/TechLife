@@ -50,6 +50,26 @@ namespace TechLife.Repository
                                 ).ToListAsync();
             return stocks;
         }
+        public async Task UpdateStockFromSupplierItem(SupplierItem supplierItem)
+        {
+            var existingStock = await GetStockByBookId((int)supplierItem.ShopStoreId);
+            if (existingStock is null)
+            {
+                var stock = new Stock
+                {
+                    ShopStoreId = (int)supplierItem.ShopStoreId,
+                    Quantity = supplierItem.Quantity,
+                    SupplierItemId = supplierItem.SupplierItemId
+                };
+                _context.Stocks.Add(stock);
+            }
+            else
+            {
+                existingStock.Quantity += supplierItem.Quantity;
+                existingStock.SupplierItemId = supplierItem.SupplierItemId;
+            }
+            await _context.SaveChangesAsync();
+        }
 
     }
 
@@ -58,6 +78,7 @@ namespace TechLife.Repository
         Task<IEnumerable<StockDisplayModel>> GetStocks(string sTerm = "");
         Task<Stock?> GetStockByBookId(int shopStoreId);
         Task ManageStock(StockDTO stockToManage);
+        Task UpdateStockFromSupplierItem(SupplierItem supplierItem);
     }
 }
 
