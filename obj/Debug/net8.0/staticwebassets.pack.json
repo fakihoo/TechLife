@@ -773,6 +773,10 @@
       "PackagePath": "staticwebassets\\img\\0dc853b7-c576-4710-95b8-0cdd48e229c5.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\15ac5dd8-9646-4385-adba-9537aa7b9d04_R.jfif",
+      "PackagePath": "staticwebassets\\img\\15ac5dd8-9646-4385-adba-9537aa7b9d04_R.jfif"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\1657112223214_image.webp",
       "PackagePath": "staticwebassets\\img\\1657112223214_image.webp"
     },
@@ -797,12 +801,28 @@
       "PackagePath": "staticwebassets\\img\\4.5Mtc.png"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\696c877e-2ad3-4706-bfaa-947cbf6025d2_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif",
+      "PackagePath": "staticwebassets\\img\\696c877e-2ad3-4706-bfaa-947cbf6025d2_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\6e887dd3-50ed-4965-8457-a456f1fd6c14_R.jfif",
+      "PackagePath": "staticwebassets\\img\\6e887dd3-50ed-4965-8457-a456f1fd6c14_R.jfif"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\7.5Alfa.jpg",
       "PackagePath": "staticwebassets\\img\\7.5Alfa.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\71492477-090d-4952-9333-4fe4c07beb1d.jpg",
       "PackagePath": "staticwebassets\\img\\71492477-090d-4952-9333-4fe4c07beb1d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\7858201d-32fe-4f46-b9c4-2c1cc44d25ad_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif",
+      "PackagePath": "staticwebassets\\img\\7858201d-32fe-4f46-b9c4-2c1cc44d25ad_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\812a89da-671a-474c-8a7c-db1c0a143e39_7772760_img7174_jpeg8aef7e15d1c1423faf27f6c27299f9dc.jfif",
+      "PackagePath": "staticwebassets\\img\\812a89da-671a-474c-8a7c-db1c0a143e39_7772760_img7174_jpeg8aef7e15d1c1423faf27f6c27299f9dc.jfif"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\90444da6-bcde-42b6-8acc-913d65806b44.jpg",
@@ -865,6 +885,10 @@
       "PackagePath": "staticwebassets\\img\\WhatsApp Image 2023-12-28 at 00.36.02_15a65580.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\a31f543c-f0ca-4bfa-933a-f344895c5a7d_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif",
+      "PackagePath": "staticwebassets\\img\\a31f543c-f0ca-4bfa-933a-f344895c5a7d_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\apple-laptop-lineup-20220825-3-medium.jpg",
       "PackagePath": "staticwebassets\\img\\apple-laptop-lineup-20220825-3-medium.jpg"
     },
@@ -899,6 +923,10 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\dc2bfaf9-4d51-4637-9afb-dda269e607ef.jpg",
       "PackagePath": "staticwebassets\\img\\dc2bfaf9-4d51-4637-9afb-dda269e607ef.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\default-profile-picture1.jpg",
+      "PackagePath": "staticwebassets\\img\\default-profile-picture1.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\e990f5e3-394b-4280-a2f9-b9297e080381.jpg",
@@ -971,6 +999,10 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\photo.jpg",
       "PackagePath": "staticwebassets\\img\\photo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\profile\\WhatsApp Image 2023-12-28 at 00.36.02_15a65580.jpg",
+      "PackagePath": "staticwebassets\\img\\profile\\WhatsApp Image 2023-12-28 at 00.36.02_15a65580.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\repaiphone3.jpg",

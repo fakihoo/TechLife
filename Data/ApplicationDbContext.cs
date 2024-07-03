@@ -4,7 +4,7 @@ using TechLife.Models;
 
 namespace TechLife.Data
 {
-    public class ApplicationDbContext:IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
@@ -25,16 +25,8 @@ namespace TechLife.Data
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierItem> SupplierItems { get; set; }
-
-
-
-
-
-
-
-
-
-
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Image> Images { get; set; }
 
 
 
@@ -49,24 +41,24 @@ namespace TechLife.Data
                 new Shop { ShopId = 3, Name = "Earphones", Category = "ACCESSORIES", Description = "Compact and powerful earphones for exceptional sound on the move. Enjoy immersive audio with comfortable in-ear designs. Choose from wired or wireless options with superior sound quality. Your perfect companion for music, calls, and more", ImgURL = "img/earphones.jpg", Price = 5, Quantity = 0 }
                 );
             modelBuilder.Entity<Cart>().HasData(
-                new Cart { CartID = 1, CartName = "Headphones",CartPrice=10 , CartQuantity=1 , CartSubTotal=10 , ImgURL= "img/headphones.jpg", ShopId=1 },
-                new Cart { CartID = 2, CartName = "Cell Phone Charger", CartPrice = 20, CartQuantity = 1, CartSubTotal = 20, ImgURL = "img/headphones.jpg", ShopId=2 },
-                new Cart { CartID = 3, CartName = "Earphones", CartPrice = 5, CartQuantity = 1, CartSubTotal = 5, ImgURL = "img/earphones.jpg", ShopId=3 }
+                new Cart { CartID = 1, CartName = "Headphones", CartPrice = 10, CartQuantity = 1, CartSubTotal = 10, ImgURL = "img/headphones.jpg", ShopId = 1 },
+                new Cart { CartID = 2, CartName = "Cell Phone Charger", CartPrice = 20, CartQuantity = 1, CartSubTotal = 20, ImgURL = "img/headphones.jpg", ShopId = 2 },
+                new Cart { CartID = 3, CartName = "Earphones", CartPrice = 5, CartQuantity = 1, CartSubTotal = 5, ImgURL = "img/earphones.jpg", ShopId = 3 }
                 );
             modelBuilder.Entity<Service>().HasData(
-                new Service { ServiceId=1, CustName="Hasan fakih", deviceModel="Iphone 14", Location="Jnoub, Kfarfila", message="The screen is broken", ServiceType="SmartPhone Repair" }
+                new Service { ServiceId = 1, CustName = "Hasan fakih", deviceModel = "Iphone 14", Location = "Jnoub, Kfarfila", message = "The screen is broken", ServiceType = "SmartPhone Repair" }
                 );
             modelBuilder.Entity<SimService>().HasData(
-                new SimService { SimServiceId=1, SimServiceName= "4.5$ Recharging Card", PhoneNumber=" ", Amount=0, Price=4, SimType="Mtc",ImgUrl= "~/img/4.5USDRecharge Voucher.jpg" },
-                new SimService { SimServiceId = 2, SimServiceName = "7.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 7, SimType = "Mtc", ImgUrl= "~/img/1657112223214_image.jpg" },
-                new SimService { SimServiceId = 3, SimServiceName = "4.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 4, SimType = "Alfa",ImgUrl= "~/img/Untitled-6.jpg" },
-                new SimService { SimServiceId = 4, SimServiceName = "7.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 7, SimType = "Alfa" , ImgUrl = "~/img/1fd2fc9d-e1ac-4c1e-9c07-1d78f99055cb.jpg" }
+                new SimService { SimServiceId = 1, SimServiceName = "4.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 4, SimType = "Mtc", ImgUrl = "~/img/4.5USDRecharge Voucher.jpg" },
+                new SimService { SimServiceId = 2, SimServiceName = "7.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 7, SimType = "Mtc", ImgUrl = "~/img/1657112223214_image.jpg" },
+                new SimService { SimServiceId = 3, SimServiceName = "4.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 4, SimType = "Alfa", ImgUrl = "~/img/Untitled-6.jpg" },
+                new SimService { SimServiceId = 4, SimServiceName = "7.5$ Recharging Card", PhoneNumber = " ", Amount = 0, Price = 7, SimType = "Alfa", ImgUrl = "~/img/1fd2fc9d-e1ac-4c1e-9c07-1d78f99055cb.jpg" }
                 );
             modelBuilder.Entity<ShopStore>()
                 .HasOne(s => s.Stock)
                 .WithOne(s => s.ShopStore)
                 .HasForeignKey<Stock>(s => s.ShopStoreId);
-                
+
 
             base.OnModelCreating(modelBuilder);
 
@@ -87,8 +79,12 @@ namespace TechLife.Data
                 .WithMany(si => si.Stocks)
                 .HasForeignKey(s => s.SupplierItemId)
                 .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Product>()
+                .HasMany(p => p.Images)
+                .WithOne(i => i.Product)
+                .HasForeignKey(i => i.ProductId);
         }
 
-        
+
     }
 }

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TechLife.ViewModels.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+
+<main>
+    <div class="container-fluid bg-transparent my-4 p-3" style="position: relative;">
+        <div class="text-right mb-4">
+            <a href="@Url.Action("Create", "Product")" class="btn btn-success">Sell</a>
+        </div>
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            @foreach (var product in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="@product.Images.FirstOrDefault()?.Url" class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <div class="clearfix mb-3">
+                                <span class="float-start badge rounded-pill bg-primary">@product.Title</span>
+                                <span class="float-end price-hp">@product.Price $</span>
+                            </div>
+                            <h5 class="card-title">@product.Description.Substring(0, Math.Min(20, @product.Description.Length))...</h5>
+                            <div class="text-center my-4">
+                                <a asp-area="Customer" asp-controller="Product" asp-action="CheckOffer" asp-route-id="@product.Id" class="btn btn-warning">Check Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</main>

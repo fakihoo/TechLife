@@ -1,4 +1,6 @@
-﻿@inject SignInManager<IdentityUser> SignInManager
+﻿
+@inject SignInManager<IdentityUser> SignInManager
+
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
@@ -12,6 +14,7 @@
     }
     <li class="nav-item"><a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Two-factor authentication</a></li>
     <li class="nav-item"><a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a></li>
-    <li class="nav-item"><a class="nav-link " href="/Customer/UserOrder/UserOrders">My Orders</a></li>
+    <li class="nav-item"><a class="nav-link" href="/Customer/UserOrder/UserOrders">My Orders</a></li>
+    <li class="nav-item"><a class="nav-link" asp-area="Customer" asp-controller="Manage" asp-action="UploadProfilePicture">Upload Profile Picture</a></li>
 
 </ul>

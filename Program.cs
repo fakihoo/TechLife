@@ -44,6 +44,8 @@ builder.Services.AddTransient<IShopItemRepository, ShopItemRepository>();
 builder.Services.AddTransient<IReportRepository, ReportRepository>();
 builder.Services.AddTransient<ISupplierRepository, SupplierRepository>();
 builder.Services.AddTransient<ISupplierItemRepository, SupplierItemRepository>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+
 
 
 
