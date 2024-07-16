@@ -1,6 +1,5 @@
-﻿
+﻿@inject UserManager<IdentityUser> UserManager
 @inject SignInManager<IdentityUser> SignInManager
-
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
@@ -16,5 +15,5 @@
     <li class="nav-item"><a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a></li>
     <li class="nav-item"><a class="nav-link" href="/Customer/UserOrder/UserOrders">My Orders</a></li>
     <li class="nav-item"><a class="nav-link" asp-area="Customer" asp-controller="Manage" asp-action="UploadProfilePicture">Upload Profile Picture</a></li>
-
+    <li class="nav-item"><a class="nav-link" asp-area="Customer" asp-controller="Product" asp-action="ManageMyProducts">Check My Selling Products</a></li>
 </ul>

@@ -7,8 +7,8 @@ namespace TechLife.Repository
         IEnumerable<Product> GetAllProducts();
         Product GetProductById(int id);
         void AddProduct(Product product);
-        void UpdateProduct(Product product);
-        void DeleteProduct(int id);
+        Task UpdateProductAsync(Product product);
+        Task DeleteProductAsync(int id);
         void Save();
     }
 }

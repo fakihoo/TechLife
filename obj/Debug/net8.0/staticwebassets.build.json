@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0e8uhCr7nAx+SeohFazlxsAGuTAMu14qgvbvLVlgc3g=",
+  "Hash": "Wgjoi3hpwdv0dWsXS8u9ukijMDSbdLfmCqA6yCQ/4KQ=",
   "Source": "TechLife",
   "BasePath": "_content/TechLife",
   "Mode": "Default",
@@ -5012,6 +5012,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\4.5Mtc.png"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\5eee4318-2977-4728-825a-8590953f60bb_GUEST_8648d306-76bd-4263-87c7-540efb49b3a6.jfif",
+      "SourceId": "TechLife",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\",
+      "BasePath": "_content/TechLife",
+      "RelativePath": "img/5eee4318-2977-4728-825a-8590953f60bb_GUEST_8648d306-76bd-4263-87c7-540efb49b3a6.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\5eee4318-2977-4728-825a-8590953f60bb_GUEST_8648d306-76bd-4263-87c7-540efb49b3a6.jfif"
     },
     {
       "Identity": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\696c877e-2ad3-4706-bfaa-947cbf6025d2_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif",

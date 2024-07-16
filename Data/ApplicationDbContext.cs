@@ -27,7 +27,8 @@ namespace TechLife.Data
         public DbSet<SupplierItem> SupplierItems { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Image> Images { get; set; }
-
+        public DbSet<ProductLike> ProductLikes { get; set; }
+        public DbSet<ProductView> ProductViews { get; set; }
 
 
 

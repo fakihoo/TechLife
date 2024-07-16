@@ -39,22 +39,20 @@ namespace TechLife.Repository
 
             _context.Products.Add(product);
         }
-
-        public void UpdateProduct(Product product)
+        public async Task UpdateProductAsync(Product product)
         {
-            // EF Core tracks changes, so no need for additional logic here
             _context.Products.Update(product);
+            await _context.SaveChangesAsync();
         }
-
-        public void DeleteProduct(int id)
+        public async Task DeleteProductAsync(int id)
         {
-            var productToDelete = _context.Products.Find(id);
-            if (productToDelete != null)
+            var product = await _context.Products.FindAsync(id);
+            if (product != null)
             {
-                _context.Products.Remove(productToDelete);
+                _context.Products.Remove(product);
+                await _context.SaveChangesAsync();
             }
         }
-
         public void Save()
         {
             _context.SaveChanges();

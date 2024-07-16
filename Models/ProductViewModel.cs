@@ -18,6 +18,7 @@ namespace TechLife.ViewModels
         public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>(); // Ensure default initialization
         public int Views { get; set; }
         public int Likes { get; set; }
+        public bool IsLiked { get; set; }
         public int Saves { get; set; }
         public string UserId { get; set; }
         public string Contact { get; set; }
@@ -30,6 +31,7 @@ namespace TechLife.ViewModels
         public DateTime UploadedAt { get; set; }
         public string UserProfilePictureUrl { get; set; }
         public string UserEmail { get; set; }
+        public bool IsSold { get; set; }
     }
 
     public class ImageViewModel

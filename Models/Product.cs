@@ -35,7 +35,7 @@ namespace TechLife.Models
         public int Views { get; set; }
         public int Likes { get; set; }
         public int Saves { get; set; }
-
+        public bool IsSold { get; set; }
         public string UserId { get; set; }
         public DateTime UploadedAt { get; set; }
     }

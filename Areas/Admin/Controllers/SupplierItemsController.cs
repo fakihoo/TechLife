@@ -59,7 +59,7 @@ namespace TechLife.Areas.Admin.Controllers
             {
                 await _supplierItemRepo.AddSupplierItem(supplierItem);
                 await _stockRepo.UpdateStockFromSupplierItem(supplierItem);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Suppliers");
             }
             catch (Exception ex)
             {
