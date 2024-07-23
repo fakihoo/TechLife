@@ -13,6 +13,7 @@ using System.Net.Mail;
 using System.Net;
 using FluentEmail.Core;
 using TechLife.EmailServices;
+using TechLife.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,11 +46,6 @@ builder.Services.AddTransient<IReportRepository, ReportRepository>();
 builder.Services.AddTransient<ISupplierRepository, SupplierRepository>();
 builder.Services.AddTransient<ISupplierItemRepository, SupplierItemRepository>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
-
-
-
-
-
 builder.Services.AddTransient<StripeService>();
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 

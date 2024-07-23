@@ -5,6 +5,222 @@
       "PackagePath": "staticwebassets\\TechLife.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\css\\animated.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animated.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\css\\owl.css",
+      "PackagePath": "staticwebassets\\assets\\css\\owl.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\css\\templatemo-chain-app-dev.css",
+      "PackagePath": "staticwebassets\\assets\\css\\templatemo-chain-app-dev.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\flexslider-icon.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\flexslider-icon.eot"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\flexslider-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\flexslider-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\flexslider-icon.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\flexslider-icon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\flexslider-icon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\flexslider-icon.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\about-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\about-right-dec.png",
+      "PackagePath": "staticwebassets\\assets\\images\\about-right-dec.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\client-bg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\client-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\client-image.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\client-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\footer-bg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\footer-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\heading-line-dec.png",
+      "PackagePath": "staticwebassets\\assets\\images\\heading-line-dec.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\pricing-table-01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\pricing-table-01.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\pricing-table-02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\pricing-table-02.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\pro-table-bottom.png",
+      "PackagePath": "staticwebassets\\assets\\images\\pro-table-bottom.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\pro-table-top.png",
+      "PackagePath": "staticwebassets\\assets\\images\\pro-table-top.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\quote.png",
+      "PackagePath": "staticwebassets\\assets\\images\\quote.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\regular-table-bottom.png",
+      "PackagePath": "staticwebassets\\assets\\images\\regular-table-bottom.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\regular-table-top.png",
+      "PackagePath": "staticwebassets\\assets\\images\\regular-table-top.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\service-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-01.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-02.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-03.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-04.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-04.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-hover-01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-hover-01.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-hover-02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-hover-02.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-hover-03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-hover-03.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\service-icon-hover-04.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service-icon-hover-04.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\services-left-dec.png",
+      "PackagePath": "staticwebassets\\assets\\images\\services-left-dec.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\services-right-dec.png",
+      "PackagePath": "staticwebassets\\assets\\images\\services-right-dec.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\slider-dec.png",
+      "PackagePath": "staticwebassets\\assets\\images\\slider-dec.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\slider-left-dec.png",
+      "PackagePath": "staticwebassets\\assets\\images\\slider-left-dec.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\white-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\white-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\js\\animation.js",
+      "PackagePath": "staticwebassets\\assets\\js\\animation.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\js\\imagesloaded.js",
+      "PackagePath": "staticwebassets\\assets\\js\\imagesloaded.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\js\\isotope.js",
+      "PackagePath": "staticwebassets\\assets\\js\\isotope.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\js\\owl-carousel.js",
+      "PackagePath": "staticwebassets\\assets\\js\\owl-carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\js\\popup.js",
+      "PackagePath": "staticwebassets\\assets\\js\\popup.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\js\\tabs.js",
+      "PackagePath": "staticwebassets\\assets\\js\\tabs.js"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\build\\config\\.eslintrc.json",
       "PackagePath": "staticwebassets\\build\\config\\.eslintrc.json"
     },
@@ -993,6 +1209,10 @@
       "PackagePath": "staticwebassets\\img\\mtcintenet.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\newtechlifelogo.jfif",
+      "PackagePath": "staticwebassets\\img\\newtechlifelogo.jfif"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\pc-repair-2.jpg",
       "PackagePath": "staticwebassets\\img\\pc-repair-2.jpg"
     },
@@ -1019,6 +1239,14 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\techlifelogo2.png",
       "PackagePath": "staticwebassets\\img\\techlifelogo2.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\techlifelogo3.jfif",
+      "PackagePath": "staticwebassets\\img\\techlifelogo3.jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\techlifelogo33.png",
+      "PackagePath": "staticwebassets\\img\\techlifelogo33.png"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\tv-repair-1.jpg",
@@ -9191,6 +9419,50 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\plugins\\uplot\\uPlot.min.css",
       "PackagePath": "staticwebassets\\plugins\\uplot\\uPlot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\jquery\\jquery.min.map",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\jquery\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TechLife.Microsoft.AspNetCore.StaticWebAssets.props",
