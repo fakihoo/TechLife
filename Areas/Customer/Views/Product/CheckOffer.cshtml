@@ -77,7 +77,14 @@
             transform: scale(1.15);
             transform-origin: top;
         }
+    /* New style for p elements */
+    .offer-description p {
+        font-size: 1.25rem; /* Adjust the size as needed */
+        line-height: 1.5; /* Adjust line height for better readability */
+        color: black;
+    }
 </style>
+
 <div class="container my-4">
     <div class="row">
         <div class="col-md-8">
@@ -120,7 +127,7 @@
                     Views: @Model.Views
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row mt-4 offer-description">
                 <div class="col-md-12">
                     <h5>Description</h5>
                     <p>@Model.Description</p>
@@ -160,8 +167,106 @@
                     <a asp-area="Customer" asp-controller="Product" asp-action="MyProducts" asp-route-userId="@Model.UserId" class="btn btn-primary">Check Profile</a>
                 </div>
             </div>
+            <div class="mt-4">
+                <canvas id="priceComparisonChart"></canvas>
+            </div>
         </div>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var currentProductId = '@Model.Id'; // Get the ID of the current product
+        var currentProductTitle = '@Model.Title'; // Get the title of the current product
+
+        fetch('/Customer/Product/GetProductPrices?title=' + encodeURIComponent(currentProductTitle))
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Debug: log fetched data
+
+                var ctx = document.getElementById('priceComparisonChart').getContext('2d');
+
+                // Map the data for the chart
+                var prices = data.map((item, index) => ({
+                    x: index,
+                    y: item.price,
+                    productId: item.id,
+                    title: item.title // Include the title in the data
+                }));
+
+                // Log prices for debugging
+                console.log("Mapped prices:", prices);
+
+                // Find the index of the current product in the dataset
+                var currentIndex = prices.findIndex(p => p.productId == currentProductId);
+
+                console.log("Current Product Index:", currentIndex);
+
+                var chart = new Chart(ctx, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [{
+                            label: 'Prices of Similar Products',
+                            data: prices,
+                            backgroundColor: prices.map((item, index) => index === currentIndex ? 'rgba(255, 99, 132, 0.2)' : 'rgba(54, 162, 235, 0.2)'),
+                            borderColor: prices.map((item, index) => index === currentIndex ? 'rgba(255, 99, 132, 1)' : 'rgba(54, 162, 235, 1)'),
+                            borderWidth: 1,
+                            pointRadius: prices.map((item, index) => index === currentIndex ? 8 : 5),
+                            pointHoverRadius: 10
+                        }]
+                    },
+                    options: {
+                        onClick: (event, elements) => {
+                            if (elements.length > 0) {
+                                const firstPoint = elements[0];
+                                const clickedIndex = firstPoint.index;
+                                const productId = chart.data.datasets[firstPoint.datasetIndex].data[clickedIndex].productId;
+
+                                // Debug: Check productId
+                                console.log("Clicked Product ID:", productId);
+
+                                // Redirect to the CheckOffer view of the clicked product
+                                if (productId) {
+                                    window.location.href = `/Customer/Product/CheckOffer?id=${productId}`;
+                                }
+                            } else {
+                                console.log("No elements clicked.");
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Product Index'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Price (in USD)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    title: function (tooltipItems) {
+                                        // Display the product title when hovering over the data point
+                                        return `Title: ${tooltipItems[0].raw.title}`;
+                                    },
+                                    label: function (tooltipItem) {
+                                        return `Price: $${tooltipItem.raw.y}`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching product prices:', error));
+    });
+</script>
+
+

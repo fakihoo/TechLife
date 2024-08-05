@@ -38,9 +38,26 @@ namespace TechLife.Controllers
         }
 
         // GET: Product
-        public IActionResult Index()
+        public IActionResult Index(string searchTerm = null, decimal? minPrice = null, decimal? maxPrice = null)
         {
             var products = _productRepository.GetAllProducts();
+
+            // Filter by search term
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                products = products.Where(p => p.Title.Contains(searchTerm) || p.Description.Contains(searchTerm));
+            }
+
+            // Filter by price range
+            if (minPrice.HasValue)
+            {
+                products = products.Where(p => p.Price >= minPrice.Value);
+            }
+            if (maxPrice.HasValue)
+            {
+                products = products.Where(p => p.Price <= maxPrice.Value);
+            }
+
             var productViewModels = products.Select(p => new ProductViewModel
             {
                 Id = p.Id,
@@ -62,6 +79,7 @@ namespace TechLife.Controllers
 
             return View(productViewModels);
         }
+
 
         public async Task<IActionResult> Create()
         {
@@ -363,6 +381,23 @@ namespace TechLife.Controllers
 
             return View(productViewModels);
         }
+
+        public JsonResult GetProductPrices(string title)
+        {
+            var products = _context.Products
+                .Where(p => p.Title == title)
+                .Select(p => new
+                {
+                    Id = p.Id,
+                    Price = p.Price,
+                    Title = p.Title
+                })
+                .ToList();
+
+            return Json(products);
+        }
+
+
 
     }
 }

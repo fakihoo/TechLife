@@ -7,11 +7,6 @@
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
     <title>TechLife</title>
 
@@ -22,6 +17,11 @@
     <link rel="stylesheet" href="~/assets/css/templatemo-chain-app-dev.css">
     <link rel="stylesheet" href="~/assets/css/animated.css">
     <link rel="stylesheet" href="~/assets/css/owl.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <style>
         body, html {
             margin: 0;
@@ -37,6 +37,8 @@
             position: sticky;
             top: 0;
             z-index: 1030;
+            background-color: white; /* Ensure the navbar has a background color */
+            transition: background-color 0.3s;
         }
 
         main {
@@ -44,17 +46,20 @@
         }
 
         .header-area .main-nav .logo img {
-            max-height: 100px; /* Adjust this value as needed */
-            height: auto; /* Maintain aspect ratio */
-            line-height: 100px; /* Align logo vertically within navbar */
-        }
-
-        .background-header .main-nav .logo img {
             max-height: 70px; /* Adjust this value as needed */
             height: auto; /* Maintain aspect ratio */
-            line-height: 80px; /* Align logo vertically within navbar */
         }
 
+        .navbar-transparent {
+            background-color: transparent !important; /* Transparent background before scroll */
+        }
+
+        .navbar-scrolled {
+            background-color: white !important; /* White background after scroll */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+        }
+
+        
     </style>
 </head>
 <body>
@@ -70,8 +75,8 @@
                             <li class="scroll-to-section"><a asp-area="" asp-controller="Home" asp-action="Index" class="active">Home</a></li>
                             <li class="scroll-to-section"><a asp-area="" asp-controller="ShopStore" asp-action="Index">Shop</a></li>
                             <li class="scroll-to-section"><a asp-area="Customer" asp-controller="Product" asp-action="Index">Selling</a></li>
-                            <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
-                            <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li>
+                            <li class="scroll-to-section"><a asp-area="Customer" asp-controller="Service" asp-action="PHIndex">Maintenance</a></li>
+                            <li class="scroll-to-section"><a asp-area="Customer" asp-controller="SimService" asp-action="Index">Sim Service</a></li>
                             @await Html.PartialAsync("_LoginPartial")
                         </ul>
 
@@ -83,6 +88,8 @@
             </div>
         </div>
     </header>
+
+
     <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()

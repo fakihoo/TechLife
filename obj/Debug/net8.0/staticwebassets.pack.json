@@ -5,6 +5,202 @@
       "PackagePath": "staticwebassets\\TechLife.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\css\\components.css",
+      "PackagePath": "staticwebassets\\Sellingtemp\\css\\components.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\css\\icons.css",
+      "PackagePath": "staticwebassets\\Sellingtemp\\css\\icons.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\css\\responsee.css",
+      "PackagePath": "staticwebassets\\Sellingtemp\\css\\responsee.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\css\\template-style.css",
+      "PackagePath": "staticwebassets\\Sellingtemp\\css\\template-style.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\Simple-Line-Icons.eot",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\Simple-Line-Icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\Simple-Line-Icons.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\Simple-Line-Icons.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\Simple-Line-Icons.ttf",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\Simple-Line-Icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\Simple-Line-Icons.woff",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\Simple-Line-Icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\mfglabsiconset-webfont.eot",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\mfglabsiconset-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\mfglabsiconset-webfont.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\mfglabsiconset-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\mfglabsiconset-webfont.ttf",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\mfglabsiconset-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\font\\mfglabsiconset-webfont.woff",
+      "PackagePath": "staticwebassets\\Sellingtemp\\font\\mfglabsiconset-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\app-store.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\app-store.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\app.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\app.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\arrow-object-dark.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\arrow-object-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\arrow-object-white.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\arrow-object-white.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\carousel-02.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\carousel-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\google-play.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\google-play.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\img-01.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\img-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\img-02.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\img-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\img-05.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\img-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\logo-1.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\logo-1.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\logo-2.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\logo-2.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\logo-3.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\logo-3.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\logo-4.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\logo-4.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\logo-5.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\logo-5.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\logo-dark.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\logo-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\portfolio\\portfolio-01.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\portfolio\\portfolio-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\portfolio\\portfolio-02.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\portfolio\\portfolio-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\portfolio\\portfolio-03.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\portfolio\\portfolio-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\portfolio\\portfolio-04.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\portfolio\\portfolio-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\portfolio\\portfolio-05.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\portfolio\\portfolio-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\portfolio\\portfolio-06.jpg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\portfolio\\portfolio-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\premium-features.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\premium-features.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\responsive-01.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\responsive-01.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\responsive-02.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\responsive-02.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\responsive-03.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\responsive-03.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\responsive-04.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\responsive-04.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\img\\start-your-business.svg",
+      "PackagePath": "staticwebassets\\Sellingtemp\\img\\start-your-business.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\js\\jquery-1.8.3.min.js",
+      "PackagePath": "staticwebassets\\Sellingtemp\\js\\jquery-1.8.3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\Sellingtemp\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\js\\responsee.js",
+      "PackagePath": "staticwebassets\\Sellingtemp\\js\\responsee.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\js\\template-scripts.js",
+      "PackagePath": "staticwebassets\\Sellingtemp\\js\\template-scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\owl-carousel\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\Sellingtemp\\owl-carousel\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\owl-carousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\Sellingtemp\\owl-carousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\owl-carousel\\owl.theme.css",
+      "PackagePath": "staticwebassets\\Sellingtemp\\owl-carousel\\owl.theme.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\Sellingtemp\\owl-carousel\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\Sellingtemp\\owl-carousel\\owl.video.play.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\css\\animated.css",
       "PackagePath": "staticwebassets\\assets\\css\\animated.css"
     },
@@ -1017,12 +1213,28 @@
       "PackagePath": "staticwebassets\\img\\4.5Mtc.png"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\4b6f3e2f-2bb8-4f77-88a1-2fab85f5c687_OIP (2).jfif",
+      "PackagePath": "staticwebassets\\img\\4b6f3e2f-2bb8-4f77-88a1-2fab85f5c687_OIP (2).jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\50dff9c5-0985-4e75-ac80-1c78b62e9e69_R.jfif",
+      "PackagePath": "staticwebassets\\img\\50dff9c5-0985-4e75-ac80-1c78b62e9e69_R.jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\5e6e927f-6162-466b-8077-295580069dbf_028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg",
+      "PackagePath": "staticwebassets\\img\\5e6e927f-6162-466b-8077-295580069dbf_028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\5eee4318-2977-4728-825a-8590953f60bb_GUEST_8648d306-76bd-4263-87c7-540efb49b3a6.jfif",
       "PackagePath": "staticwebassets\\img\\5eee4318-2977-4728-825a-8590953f60bb_GUEST_8648d306-76bd-4263-87c7-540efb49b3a6.jfif"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\696c877e-2ad3-4706-bfaa-947cbf6025d2_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif",
       "PackagePath": "staticwebassets\\img\\696c877e-2ad3-4706-bfaa-947cbf6025d2_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\6cbb05ce-7617-440a-813f-46eba47e89f3_iphone-12-pro-256gb-qnijle9x_0.jpg",
+      "PackagePath": "staticwebassets\\img\\6cbb05ce-7617-440a-813f-46eba47e89f3_iphone-12-pro-256gb-qnijle9x_0.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\6e887dd3-50ed-4965-8457-a456f1fd6c14_R.jfif",
@@ -1043,6 +1255,10 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\812a89da-671a-474c-8a7c-db1c0a143e39_7772760_img7174_jpeg8aef7e15d1c1423faf27f6c27299f9dc.jfif",
       "PackagePath": "staticwebassets\\img\\812a89da-671a-474c-8a7c-db1c0a143e39_7772760_img7174_jpeg8aef7e15d1c1423faf27f6c27299f9dc.jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\8e7c93a7-e822-4b2f-ba0a-343006398336_R (1).jfif",
+      "PackagePath": "staticwebassets\\img\\8e7c93a7-e822-4b2f-ba0a-343006398336_R (1).jfif"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\90444da6-bcde-42b6-8acc-913d65806b44.jpg",
@@ -1137,6 +1353,14 @@
       "PackagePath": "staticwebassets\\img\\curve-smartv.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\d5357f55-1f4f-497b-b14e-c800aa54bdf4_OIP (1).jfif",
+      "PackagePath": "staticwebassets\\img\\d5357f55-1f4f-497b-b14e-c800aa54bdf4_OIP (1).jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\d8caf73b-6d5a-44b7-9cff-483e7f67f2d6_OIP (3).jfif",
+      "PackagePath": "staticwebassets\\img\\d8caf73b-6d5a-44b7-9cff-483e7f67f2d6_OIP (3).jfif"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\db044eff-1e39-4804-bf44-97e139694ef7.jpg",
       "PackagePath": "staticwebassets\\img\\db044eff-1e39-4804-bf44-97e139694ef7.jpg"
     },
@@ -1223,6 +1447,10 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\photo.jpg",
       "PackagePath": "staticwebassets\\img\\photo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\profile\\WhatsApp Image 2023-12-28 at 00.35.46_5ecbecb1.jpg",
+      "PackagePath": "staticwebassets\\img\\profile\\WhatsApp Image 2023-12-28 at 00.35.46_5ecbecb1.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\profile\\WhatsApp Image 2023-12-28 at 00.36.02_15a65580.jpg",
