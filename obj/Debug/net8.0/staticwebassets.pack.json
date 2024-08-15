@@ -201,6 +201,142 @@
       "PackagePath": "staticwebassets\\Sellingtemp\\owl-carousel\\owl.video.play.png"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\SimService\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\SimService\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\SimService\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\css\\style.css",
+      "PackagePath": "staticwebassets\\SimService\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\SimService\\css\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\css\\style.scss",
+      "PackagePath": "staticwebassets\\SimService\\css\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\SimService\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\SimService\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\SimService\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\about-img.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\about-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\about-img.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\about-img.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\client1.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\client1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\client2.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\client2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\hero-bg.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\hero-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\next.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\prev.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\prev.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\s1.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\s1.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\s2.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\s2.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\s3.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\s3.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\slider-bg.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\slider-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\slider-img.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\slider-img.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\team-1.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\team-2.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\team-3.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\team-4.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\team-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\track-bg.jpg",
+      "PackagePath": "staticwebassets\\SimService\\images\\track-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\w1.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\w1.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\w2.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\w2.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\w3.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\w3.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\images\\w4.png",
+      "PackagePath": "staticwebassets\\SimService\\images\\w4.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\SimService\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\js\\custom.js",
+      "PackagePath": "staticwebassets\\SimService\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\SimService\\js\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\SimService\\js\\jquery-3.4.1.min.js"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\css\\animated.css",
       "PackagePath": "staticwebassets\\assets\\css\\animated.css"
     },
@@ -1221,6 +1357,10 @@
       "PackagePath": "staticwebassets\\img\\50dff9c5-0985-4e75-ac80-1c78b62e9e69_R.jfif"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\51cfad98bd791d1cd2095a05eaa59604.png",
+      "PackagePath": "staticwebassets\\img\\51cfad98bd791d1cd2095a05eaa59604.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\5e6e927f-6162-466b-8077-295580069dbf_028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg",
       "PackagePath": "staticwebassets\\img\\5e6e927f-6162-466b-8077-295580069dbf_028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg"
     },
@@ -1321,8 +1461,136 @@
       "PackagePath": "staticwebassets\\img\\WhatsApp Image 2023-12-28 at 00.36.02_15a65580.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 4.04.59 PM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 4.04.59 PM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.09 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.09 PM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.09 PM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.09 PM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.10 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.10 PM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.10 PM (2).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.10 PM (2).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.10 PM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.10 PM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.11 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.11 PM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.11 PM (2).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.11 PM (2).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.11 PM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.11 PM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.12 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.12 PM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.12 PM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.12 PM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.13 PM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.13 PM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.15 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.15 PM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-08 at 8.32.15 PM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-08 at 8.32.15 PM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (10).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (10).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (11).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (11).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (12).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (12).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (13).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (13).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (14).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (14).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (2).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (2).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (3).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (3).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (4).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (4).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (5).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (5).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (6).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (6).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (7).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (7).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (8).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (8).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (9).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM (9).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.03 AM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.04 AM (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.04 AM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\WhatsApp Image 2024-08-09 at 10.21.04 AM.jpeg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2024-08-09 at 10.21.04 AM.jpeg"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\a31f543c-f0ca-4bfa-933a-f344895c5a7d_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif",
       "PackagePath": "staticwebassets\\img\\a31f543c-f0ca-4bfa-933a-f344895c5a7d_11817811_img20200626wa0033_jpegab38881e444bac6974afbecc16c48415.jfif"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\alfalogo.jfif",
+      "PackagePath": "staticwebassets\\img\\alfalogo.jfif"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\apple-laptop-lineup-20220825-3-medium.jpg",
@@ -1433,6 +1701,10 @@
       "PackagePath": "staticwebassets\\img\\mtcintenet.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\mtclogo2.png",
+      "PackagePath": "staticwebassets\\img\\mtclogo2.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\newtechlifelogo.jfif",
       "PackagePath": "staticwebassets\\img\\newtechlifelogo.jfif"
     },
@@ -1479,6 +1751,10 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\tv-repair-1.jpg",
       "PackagePath": "staticwebassets\\img\\tv-repair-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\unnamed.png",
+      "PackagePath": "staticwebassets\\img\\unnamed.png"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\js\\site.js",

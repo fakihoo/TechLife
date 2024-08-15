@@ -36,6 +36,41 @@ namespace TechLife.Utility
             var session = await service.CreateAsync(options);
             return session.Url; // Return the session URL directly
         }
+        public async Task<Session> CreateCheckoutSession(double amount, string currency, int simServiceId)
+        {
+            var options = new SessionCreateOptions
+            {
+                PaymentMethodTypes = new List<string> { "card" },
+                LineItems = new List<SessionLineItemOptions>
+        {
+            new SessionLineItemOptions
+            {
+                PriceData = new SessionLineItemPriceDataOptions
+                {
+                    UnitAmount = (long)(amount * 100), // Stripe expects amount in cents
+                    Currency = currency,
+                    ProductData = new SessionLineItemPriceDataProductDataOptions
+                    {
+                        Name = "Sim Service Request"
+                    },
+                },
+                Quantity = 1,
+            },
+        },
+                Mode = "payment",
+                SuccessUrl = $"https://localhost:7293/Admin/SimServicesToDo/PaymentSuccess?session_id={{CHECKOUT_SESSION_ID}}&sim_service_id={simServiceId}",
+                CancelUrl = "https://localhost:7293/Admin/SimServicesToDo/PaymentFailed",
+                Metadata = new Dictionary<string, string>
+        {
+            { "SimServiceId", simServiceId.ToString() }
+        }
+            };
+
+            var service = new SessionService();
+            Session session = await service.CreateAsync(options);
+            return session;
+        }
+
 
 
     }

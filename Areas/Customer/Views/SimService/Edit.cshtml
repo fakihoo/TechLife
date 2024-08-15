@@ -1,0 +1,67 @@
+﻿@model TechLife.Models.SimService
+@{
+    Layout = "_AdminLayout";
+}
+@{
+    ViewData["Title"] = "Edit Sim Service";
+}
+
+<h2>Edit Sim Service</h2>
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="SimServiceName" class="control-label"></label>
+        <input asp-for="SimServiceName" class="form-control" />
+        <span asp-validation-for="SimServiceName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dollars" class="control-label"></label>
+        <input asp-for="Dollars" class="form-control" />
+        <span asp-validation-for="Dollars" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Amount" class="control-label"></label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SimType" class="control-label"></label>
+        <input asp-for="SimType" class="form-control" />
+        <span asp-validation-for="SimType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SimServiceType" class="control-label"></label>
+        <input asp-for="SimServiceType" class="form-control" />
+        <span asp-validation-for="SimServiceType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber" class="control-label"></label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImgUrl" class="control-label">Current Image</label>
+        <img src="/@Model.ImgUrl" alt="Current Image" style="width: 150px; height: auto;" class="d-block mb-2" />
+        <input asp-for="ImgUrl" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label for="ImgFile">Upload New Image (optional)</label>
+        <input type="file" name="ImgFile" class="form-control" />
+    </div>
+    <input type="hidden" asp-for="SimServiceId" />
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Manage" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

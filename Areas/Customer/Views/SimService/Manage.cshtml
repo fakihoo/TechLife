@@ -1,0 +1,66 @@
+﻿@model PaginatedList<SimService>
+@{
+    Layout = "_AdminLayout";
+}
+<h1>Manage Sim Services</h1>
+<a asp-controller="SimService" asp-action="Add" class="btn btn-secondary">
+    <i class="bi bi-plus-circle"></i> Add New Service
+</a>
+<br />
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Service Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Sim Type</th>
+            <th>Sim Service Type</th>
+            <th>Actual Dollars</th>
+            <th>Phone Number</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.SimServiceName</td>
+                <td>$@service.Price</td>
+                <td>@service.Amount</td>
+                <td>@service.SimType</td>
+                <td>@service.SimServiceType</td>
+                <td>@service.Dollars</td>
+                <td>@service.PhoneNumber</td>
+                <td><img src="/@service.ImgUrl" alt="Service Image" style="width: 100px; height: auto;"></td>
+                <td>
+                    <a asp-controller="SimService" asp-action="Edit" asp-route-id="@service.SimServiceId" class="btn btn-warning">
+                        <i class="bi bi-pencil"></i> Edit
+                    </a>
+                    <form method="post" action="@Url.Action("Delete", "SimService", new { id = service.SimServiceId })" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="row mt-4">
+    <div class="col-6 text-start">
+        @if (Model.HasPreviousPage)
+        {
+            <a asp-action="Manage" asp-route-page="@(Model.PageIndex - 1)" class="btn btn-primary">Previous</a>
+        }
+    </div>
+    <div class="col-6 text-end">
+        @if (Model.HasNextPage)
+        {
+            <a asp-action="Manage" asp-route-page="@(Model.PageIndex + 1)" class="btn btn-primary">Next</a>
+        }
+    </div>
+</div>
+<br />

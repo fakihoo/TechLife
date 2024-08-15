@@ -17,7 +17,7 @@ namespace TechLife.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -749,6 +749,9 @@ namespace TechLife.Migrations
                     b.Property<int>("Amount")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("Dollars")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("ImgUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -761,6 +764,10 @@ namespace TechLife.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("SimServiceName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SimServiceType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -777,40 +784,48 @@ namespace TechLife.Migrations
                         {
                             SimServiceId = 1,
                             Amount = 0,
+                            Dollars = 0m,
                             ImgUrl = "~/img/4.5USDRecharge Voucher.jpg",
                             PhoneNumber = " ",
                             Price = 4m,
                             SimServiceName = "4.5$ Recharging Card",
+                            SimServiceType = "Normal",
                             SimType = "Mtc"
                         },
                         new
                         {
                             SimServiceId = 2,
                             Amount = 0,
+                            Dollars = 0m,
                             ImgUrl = "~/img/1657112223214_image.jpg",
                             PhoneNumber = " ",
                             Price = 7m,
                             SimServiceName = "7.5$ Recharging Card",
+                            SimServiceType = "Normal",
                             SimType = "Mtc"
                         },
                         new
                         {
                             SimServiceId = 3,
                             Amount = 0,
+                            Dollars = 0m,
                             ImgUrl = "~/img/Untitled-6.jpg",
                             PhoneNumber = " ",
                             Price = 4m,
                             SimServiceName = "4.5$ Recharging Card",
+                            SimServiceType = "Normal",
                             SimType = "Alfa"
                         },
                         new
                         {
                             SimServiceId = 4,
                             Amount = 0,
+                            Dollars = 0m,
                             ImgUrl = "~/img/1fd2fc9d-e1ac-4c1e-9c07-1d78f99055cb.jpg",
                             PhoneNumber = " ",
                             Price = 7m,
                             SimServiceName = "7.5$ Recharging Card",
+                            SimServiceType = "Normal",
                             SimType = "Alfa"
                         });
                 });

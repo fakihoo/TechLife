@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TechLife.Models;
+using TechLife.Models.DTOs;
 using TechLife.Repository;
 using TechLife.Repository.IRepository;
+using TechLife.Utility;
 
 namespace TechLife.Areas.Admin.Controllers
 {
@@ -14,10 +17,11 @@ namespace TechLife.Areas.Admin.Controllers
     public class SimServicesToDoController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-
-        public SimServicesToDoController(IUnitOfWork unitOfWork)
+        private readonly StripeService _paymentService;
+        public SimServicesToDoController(IUnitOfWork unitOfWork, StripeService paymentService)
         {
             _unitOfWork = unitOfWork;
+            _paymentService = paymentService;
         }
 
         public async Task<IActionResult> Index()
@@ -44,8 +48,8 @@ namespace TechLife.Areas.Admin.Controllers
                     SimServicesToDoName = simService.SimServiceName,
                     SimType = simService.SimType,
                     Price = (double)simService.Price,
-                    CustName = "Default Name",
-                    PhoneNumber = 1234567890,
+                    CustName = "Default Name", 
+                    PhoneNumber = 12345678,   
                     SimServiceId = simService.SimServiceId
                 };
 
@@ -59,25 +63,13 @@ namespace TechLife.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(SimServicesToDo cartItem)
         {
-            ModelState.Clear();
-
-            if (!ModelState.IsValid)
-            {
-                var errors = ModelState.Values.SelectMany(v => v.Errors);
-                foreach (var error in errors)
-                {
-                    Console.WriteLine(error.ErrorMessage);
-                }
-
-                return View(cartItem);
-            }
-
             try
             {
-                await _unitOfWork.SimServicesToDo.AddAsync(cartItem);
-                _unitOfWork.Save();
-                TempData["success"] = "Service Was Requested Successfully, The Team Will Respond Within 15 minutes";
-                return RedirectToAction("Index", "SimService", new { area = "Customer" });
+                var session = await _paymentService.CreateCheckoutSession(cartItem.Price, "usd", cartItem.SimServiceId);
+
+                TempData["SimServicesToDo"] = JsonConvert.SerializeObject(cartItem);
+
+                return Redirect(session.Url);
             }
             catch (Exception ex)
             {
@@ -86,31 +78,64 @@ namespace TechLife.Areas.Admin.Controllers
             }
         }
 
-        public async Task<IActionResult> Delete(int? id)
+
+        [HttpGet]
+        [Authorize(Roles = SD.Role_Customer)]
+        public async Task<IActionResult> PaymentSuccess()
         {
-            if (id == null || id == 0)
-                return NotFound();
+            // Retrieve the SimServicesToDo data from TempData
+            var cartItemJson = TempData["SimServicesToDo"]?.ToString();
+            if (cartItemJson == null)
+            {
+                return NotFound("No data available for the payment.");
+            }
 
-            SimServicesToDo? CartFromDb = await _unitOfWork.SimServicesToDo.GetAsync(u => u.SimServicesToDoId == id);
+            var cartItem = JsonConvert.DeserializeObject<SimServicesToDo>(cartItemJson);
 
-            if (CartFromDb == null)
-                return NotFound();
+            if (cartItem == null)
+            {
+                return NotFound("Invalid data for the payment.");
+            }
 
-            return View(CartFromDb);
+            // Retrieve the purchased service
+            var purchasedService = await _unitOfWork.SimService.GetAsync(s => s.SimServiceId == cartItem.SimServiceId);
+            if (purchasedService == null)
+            {
+                return NotFound("Purchased service not found.");
+            }
+
+            // Retrieve all SimService records
+            var allServices = await _unitOfWork.SimService.GetAllAsync();
+
+            // Filter for recommended bundles based on your logic
+            var recommendedBundles = allServices
+                .Where(s => s.SimServiceType == "Internet" && s.SimType == "Mtc" && s.Dollars <= purchasedService.Dollars)
+                .OrderByDescending(s => s.Dollars)  // Sort by Price to get the highest value within the limit
+                .Take(3)  // Take the top 3 bundles
+                .ToList();
+
+            // Debug output
+            foreach (var bundle in recommendedBundles)
+            {
+                Console.WriteLine($"Bundle: {bundle.SimServiceName}, Price: {bundle.Price}, Dollars: {bundle.Dollars}");
+            }
+
+            // Prepare the view model
+            var viewModel = new PaymentSuccessViewModel
+            {
+                PurchasedService = purchasedService,
+                RecommendedBundles = recommendedBundles
+            };
+
+            return View(viewModel);
         }
 
-        [HttpPost, ActionName("Delete")]
-        public async Task<IActionResult> DeletePost(int? id)
+        [HttpGet]
+        public IActionResult PaymentFailed()
         {
-            SimServicesToDo? obj = await _unitOfWork.SimServicesToDo.GetAsync(u => u.SimServicesToDoId == id);
-
-            if (obj == null)
-                return NotFound();
-
-            _unitOfWork.SimServicesToDo.Remove(obj);
-            _unitOfWork.Save();
-
-            return RedirectToAction("Index");
+            TempData["error"] = "Payment failed or was canceled. Please try again.";
+            return RedirectToAction("Index", "SimService", new { area = "Customer" });
         }
+
     }
 }

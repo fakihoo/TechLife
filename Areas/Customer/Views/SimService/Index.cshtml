@@ -1,120 +1,200 @@
-﻿
+﻿<!DOCTYPE html>
+<html>
+
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="~/SimService/images/favicon.png" type="">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <title> TechLife SimService </title>
 
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="~/SimService/css/bootstrap.css" />
 
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- font awesome style -->
+    <!-- Custom styles for this template -->
+    <link href="~/SimService/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="~/SimService/css/responsive.css" rel="stylesheet" />
+    <style>
+        .hero_area {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 0; /* Ensure hero_area is below content but above the background */
+        }
+
+        .hero_bg_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+            z-index: -1; /* Make sure it is behind all other content */
+        }
+
+        .bg_img_box {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+        }
+    </style>
 </head>
-<style>
-    .curved {
-        position: relative;
-        background: #2c3e50;
-        height: 30vh;
-        border-bottom-left-radius: 50% 20%;
-        border-bottom-right-radius: 50% 20%;
-    }
-    .btn-custom {
-        background-color: #4CAF50;
-        border-color: #4CAF50;
-    }
 
-        .btn-custom:hover {
-            background-color: #007BFF; /* Primary color for hover */
-            border-color: #007BFF;
-        }
+<body>
 
-    .btn-danger-custom {
-        background-color: #4CAF50;
-        border-color: #4CAF50;
-    }
+    <div class="hero_area">
 
-        .btn-danger-custom:hover {
-            background-color: #DC3545; /* Danger color for hover */
-            border-color: #DC3545;
-        }
-</style>
-<partial name="_Notification"/>
-<section>
-    <div class="curved"></div>
-</section>
-<div class="col-md-12">
-    @if (User.IsInRole(SD.Role_Admin))
-    {
-        <a asp-area="Admin" asp-controller="SimServicesToDo" asp-action="Index" class="btn btn-success float-md-end mx-2">
-            <i class="bi bi-bag"></i> Services
-        </a>
-    }
-</div>
-<div class="d-flex align-items-center justify-content-center mt-1" style="min-height:100vh;">
-    
-    <div class="d-grid gap-2 col-6">
-        <a asp-area="" asp-controller="SimService" asp-action="MtcIndex" class="btn btn-primary btn-lg btn-custom d-flex align-items-center justify-content-center" style="height: 150px; font-size: 1.5rem;">
-            Mtc
-        </a>
-        <a asp-area="" asp-controller="SimService" asp-action="AlfaIndex" class="btn btn-danger btn-lg btn-danger-custom d-flex align-items-center justify-content-center" style="height: 150px; font-size: 1.5rem;">
-            Alfa
-        </a>
+        <div class="hero_bg_box">
+            <div class="bg_img_box">
+                <img src="~/SimService/images/hero-bg.png" alt="">
+            </div>
+        </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="inputNumber" class="col-sm-2 col-form-label">Phone Number</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="inputNumber" placeholder="8-digit-phone-number">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputAmount" class="col-sm-2 col-form-label">Amount</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="inputAmount" placeholder="please enter the amount of ceridit required">
-                                </div>
-                            </div>
-                            <fieldset class="form-group">
-                                <div class="row">
-                                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="gridRadios1">
-                                                MTC
-                                            </label>
+        <!-- slider section -->
+        <section class="slider_section">
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Single Carousel Item -->
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail-box">
+                                        <h1>
+                                            Sim <br>
+                                            Services
+                                        </h1>
+                                        <p>
+                                            You can easily charge your Touch or Alfa Sim card by selecting the bundle and our team will Serve you within 10 minutes.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="" class="btn1">
+                                                Read More
+                                            </a>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Alfa
-                                            </label>
-                                        </div>
-
                                     </div>
                                 </div>
-                            </fieldset>
-
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Request Credit</button>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="~/SimService/images/slider-img.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- end slider section -->
     </div>
 
-</div>
+    <!-- service section -->
 
+    <section class="service_section layout_padding">
+        <div class="service_container">
+            <div class="container">
+                <div class="heading_container heading_center">
+                    <h2>
+                        Our <span>Services</span>
+                    </h2>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="~/img/alfalogo.jfif" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Alfa Bundles
+                                </h5>
+                                <p>
+                                    fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                    The
+                                    point of using
+                                </p>
+                                <a href="/Customer/SimService/AlfaIndex">
+                                    View Bundles
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="~/img/mtclogo2.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Mtc Bundles
+                                </h5>
+                                <p>
+                                    fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                    The
+                                    point of using
+                                </p>
+                                <a href="/Customer/SimService/MtcIndex">
+                                    View Bundles
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="~/SimService/images/s3.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Expert Support
+                                </h5>
+                                <p>
+                                    fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                    The
+                                    point of using
+                                </p>
+                                <a href="">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        View All
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- jQery -->
+    <script type="text/javascript" src="~/SimService/js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script type="text/javascript" src="~/SimService/js/bootstrap.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="~/SimService/js/custom.js"></script>
+
+</body>
+
+</html>

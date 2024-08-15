@@ -1,92 +1,146 @@
-﻿@model List<SimService>
+﻿@model PaginatedList<TechLife.Models.SimService>
 
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-</head>
 <style>
-    .skewed {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        background: #4CAF50;
-        z-index: 0;
-        transform: skewY(6deg);
-        transform-origin: top right;
-    }
-
     .card-container {
         display: flex;
-        gap: 20px; 
-        overflow-x: auto; 
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
     }
-
     .card {
-        flex: 0 0 100%;
-        max-width: 18rem; 
+        position: relative;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
     }
-
-    .top-left {
+    .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         position: absolute;
-        top: 10px; /* Adjust this value for vertical position */
-        left: 10px; /* Adjust this value for horizontal position */
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .card__content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: rgba(242, 242, 242, 0.9);
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .card:hover .card__content {
+        transform: rotateX(0deg);
+    }
+    .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+    }
+    .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+    }
+    @@media (max-width: 768px) {
+        .card {
+            width: calc(50% - 20px);
+        }
+    }
+    @@media (max-width: 480px) {
+        .card {
+            width: calc(100% - 20px);
+        }
     }
 
-    .arrow-icon {
-        font-size: 24px; /* Adjust the size as needed */
+    .search-form {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    .search-button {
+        height: 36px;
+        padding: 0 12px;
+        font-size: 14px;
+        border-radius: 20px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        transition: background-color 0.3s;
+    }
+
+    .search-button:hover {
+        background-color: #0056b3;
     }
 </style>
-<section>
-    <div class="skewed"></div>
-</section>
-<a asp-controller="SimService" asp-action="Index" class="btn top-left">
-    <i class="bi bi-arrow-left-square-fill  arrow-icon"></i>
-</a>
-@if (User.IsInRole(SD.Role_Admin))
-{
-    <div class="col-12 text-end mb-3">
-        <a asp-controller="SimService" asp-action="Add" class="btn btn-secondary"><i class="bi bi-plus-circle"></i> Add New </a>
-    </div>
-}
+<br />
+<form method="get" class="search-form">
+    <input type="text" name="searchTerm" value="@ViewData["SearchTerm"]" placeholder="Search by Service Name" class="form-control me-2" style="width: auto; max-width: 300px;"/>
+    <button type="submit" class="search-button">Search</button>
+</form>
+
 <div class="card-container">
     @foreach (var obj in Model)
     {
-        if (obj.SimType.Equals("Mtc"))
+        if (obj.SimType.Equals("Mtc", StringComparison.OrdinalIgnoreCase))
         {
-            <div class="card shadow rounded">
-                <img class="card-img-top" src="~/@obj.ImgUrl" alt="Card image cap">
+            <a href="@Url.Action("Add", "SimServicesToDo", new { area = "Admin", id = obj.SimServiceId })" 
+               class="card shadow rounded">
+                <img src="/@obj.ImgUrl" alt="Card image" class="card-img">
+                <div class="card__content">
+                    <p class="card__title">@obj.SimServiceName</p>
+                    <p class="card__description">
+                        @obj.SimServiceType 
+                        @if (!obj.SimServiceType.Equals("Internet", StringComparison.OrdinalIgnoreCase)) 
+                        { 
+                            <text>, for $@obj.Price</text> 
+                        }
+                    </p>
+                </div>
                 @if (User.IsInRole(SD.Role_Admin))
                 {
-                    <a asp-controller="SimService" asp-action="Delete" asp-route-id="@obj.SimServiceId" class="btn btn-danger position-absolute top-0 end-0 m-2">
+                    <a href="@Url.Action("Delete", "SimService", new { id = obj.SimServiceId })" 
+                       class="btn btn-danger position-absolute top-0 end-0 m-2">
                         <i class="bi bi-trash"></i>
                     </a>
                 }
-                <div class="card-body">
-                    <h5 class="card-title">@obj.SimServiceName</h5>
-                    <p class="card-text">a month of service, for $@obj.Price</p>
-                </div>
-                @if(!User.IsInRole(SD.Role_Admin)){
-                <div class="card-footer">
-                    
-                    <div class="mt-auto">
-                       <a asp-area="Admin" asp-controller="SimServicesToDo" asp-action="Add" asp-route-id=@obj.SimServiceId  class="btn btn-success btn-block"> 
-                           <i class="bi bi-folder-plus"></i> Request Service
-                       </a>
-                    </div>
-                </div>
-                }
-            </div>
+            </a>
         }
     }
 </div>
-                   
+
+<div class="row mt-4">
+    <div class="col-6 text-start">
+        @if (Model.HasPreviousPage)
+        {
+            <a asp-action="MtcIndex" asp-route-page="@(Model.PageIndex - 1)" class="btn btn-primary">Previous</a>
+        }
+    </div>
+    <div class="col-6 text-end">
+        @if (Model.HasNextPage)
+        {
+            <a asp-action="MtcIndex" asp-route-page="@(Model.PageIndex + 1)" class="btn btn-primary">Next</a>
+        }
+    </div>
+</div>

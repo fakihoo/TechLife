@@ -1,38 +1,40 @@
 ﻿@model SimService
-
-<h1>Add New Sim Service</h1>
-<br />
-<br />
-<br />
-<form method="post">
+@{
+    Layout = "_AdminLayout";
+}
+<form method="post" enctype="multipart/form-data">
     <div class="border p-3 mt-4">
         <div class="row pc-2">
             <h2 class="text-primary">Add To Services</h2>
             <hr />
         </div>
         <div class="mb-3">
-            <label asp-for="SimServiceName"> Service Name</label>
+            <label asp-for="SimServiceName">Service Name</label>
             <input asp-for="SimServiceName" class="form-control" required />
         </div>
         <div class="mb-3">
-            <label asp-for="Price"> Service Price</label>
+            <label asp-for="Price">Service Price</label>
             <input asp-for="Price" class="form-control" required />
         </div>
         <div class="mb-3">
-            <label asp-for="Amount"> Service Amount</label>
-            <input asp-for="Amount" class="form-control" required />
+            <label asp-for="Dollars">Actual Dollars</label>
+            <input asp-for="Dollars" class="form-control" required />
         </div>
         <div class="mb-3">
-            <label asp-for="SimType"> Service type</label>
+            <label asp-for="SimType">Sim Type</label>
             <input asp-for="SimType" class="form-control" required />
         </div>
         <div class="mb-3">
-            <label asp-for="PhoneNumber"> Phone Number</label>
+            <label asp-for="SimServiceType">Sim Service Type</label>
+            <input asp-for="SimServiceType" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label asp-for="PhoneNumber">Phone Number</label>
             <input asp-for="PhoneNumber" class="form-control" required />
         </div>
         <div class="mb-3">
-            <label asp-for="ImgUrl"> Product Image</label>
-            <input asp-for="ImgUrl" class="form-control" placeholder="img/ImgURL.jpg" required />
+            <label for="ImgFile">Product Image</label>
+            <input type="file" id="ImgFile" name="ImgFile" class="form-control" required />
             <span asp-validation-for="ImgUrl" class="text-danger"></span>
         </div>
         <div class="row mt-4">
@@ -40,10 +42,8 @@
                 <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
             </div>
             <div class="col-6">
-                <a asp-controller="SimService" asp-action="Index" class="btn btn-primary" style="width:150px">GO Back</a>
+                <a asp-controller="SimService" asp-action="Manage" class="btn btn-primary" style="width:150px">GO Back</a>
             </div>
         </div>
-
-
     </div>
 </form>
