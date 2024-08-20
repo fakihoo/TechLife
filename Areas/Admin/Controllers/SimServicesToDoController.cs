@@ -77,8 +77,6 @@ namespace TechLife.Areas.Admin.Controllers
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
-
-
         [HttpGet]
         [Authorize(Roles = SD.Role_Customer)]
         public async Task<IActionResult> PaymentSuccess()
@@ -104,15 +102,60 @@ namespace TechLife.Areas.Admin.Controllers
                 return NotFound("Purchased service not found.");
             }
 
+            // Add the request to the SimServiceToDo Db
+             _unitOfWork.SimServicesToDo.AddAsync(cartItem);
+             _unitOfWork.Save(); // Ensure the change is saved to the database
+
             // Retrieve all SimService records
             var allServices = await _unitOfWork.SimService.GetAllAsync();
 
-            // Filter for recommended bundles based on your logic
-            var recommendedBundles = allServices
-                .Where(s => s.SimServiceType == "Internet" && s.SimType == "Mtc" && s.Dollars <= purchasedService.Dollars)
-                .OrderByDescending(s => s.Dollars)  // Sort by Price to get the highest value within the limit
-                .Take(3)  // Take the top 3 bundles
-                .ToList();
+            List<SimService> recommendedBundles = new List<SimService>();
+
+            // Determine recommendation logic based on SimType and SimServiceType
+            if (purchasedService.SimType == "Mtc")
+            {
+                if (purchasedService.SimServiceType == "Dollars")
+                {
+                    // Recommend Mtc Internet bundles
+                    recommendedBundles = allServices
+                        .Where(s => s.SimServiceType == "Internet" && s.SimType == "Mtc" && s.Dollars <= purchasedService.Dollars)
+                        .OrderByDescending(s => s.Viewed)
+                        .ThenBy(s => s.Dollars)
+                        .Take(3)
+                        .ToList();
+                }
+                else if (purchasedService.SimServiceType == "Days")
+                {
+                    // Recommend Mtc Dollars bundles
+                    recommendedBundles = allServices
+                        .Where(s => s.SimServiceType == "Dollars" && s.SimType == "Mtc")
+                        .OrderBy(s => s.Dollars)
+                        .Take(3)
+                        .ToList();
+                }
+            }
+            else if (purchasedService.SimType == "Alfa")
+            {
+                if (purchasedService.SimServiceType == "Dollars")
+                {
+                    // Recommend Alfa Internet bundles
+                    recommendedBundles = allServices
+                        .Where(s => s.SimServiceType == "Internet" && s.SimType == "Alfa" && s.Price <= purchasedService.Dollars)
+                        .OrderByDescending(s => s.Viewed)
+                        .ThenBy(s => s.Price)
+                        .Take(3)
+                        .ToList();
+                }
+                else if (purchasedService.SimServiceType == "Days")
+                {
+                    // Recommend Alfa Dollars bundles
+                    recommendedBundles = allServices
+                        .Where(s => s.SimServiceType == "Dollars" && s.SimType == "Alfa")
+                        .OrderBy(s => s.Dollars)
+                        .Take(3)
+                        .ToList();
+                }
+            }
 
             // Debug output
             foreach (var bundle in recommendedBundles)
@@ -129,13 +172,42 @@ namespace TechLife.Areas.Admin.Controllers
 
             return View(viewModel);
         }
-
         [HttpGet]
         public IActionResult PaymentFailed()
         {
             TempData["error"] = "Payment failed or was canceled. Please try again.";
             return RedirectToAction("Index", "SimService", new { area = "Customer" });
         }
+        public async Task<IActionResult> ViewBundle(int id)
+        {
+            var bundle = await _unitOfWork.SimService.GetAsync(s => s.SimServiceId == id);
 
+            if (bundle == null)
+            {
+                return NotFound("Bundle not found.");
+            }
+
+            // Increment the viewed count
+            bundle.Viewed += 1;
+            await _unitOfWork.SaveAsync();
+
+            // Retrieve all services asynchronously
+            var allServices = await _unitOfWork.SimService.GetAllAsync();
+
+            // Filter recommended bundles in memory
+            var recommendedBundles = allServices
+                .Where(s => s.SimServiceType == "Internet" && s.SimType == bundle.SimType && s.SimServiceId != id)
+                .Take(3)
+                .ToList();
+
+            // Create the view model
+            var viewModel = new ViewBundleViewModel
+            {
+                MainBundle = bundle,
+                RecommendedBundles = recommendedBundles
+            };
+
+            return View(viewModel);
+        }
     }
 }

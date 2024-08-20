@@ -1,0 +1,101 @@
+﻿@model TechLife.Models.DTOs.ViewBundleViewModel
+<br />
+<div class="container">
+    <!-- Main Bundle Card -->
+    <div class="card shadow rounded main-bundle-card">
+        <div class="card-body">
+            <h3 class="card-title">@Model.MainBundle.SimServiceName</h3>
+            <p class="card-text">To activate this bundle, please send an SMS with the code <strong>@Model.MainBundle.SimServiceName</strong>.</p>
+        </div>
+    </div>
+
+    <!-- Recommended Bundles Section -->
+    <h2 class="mt-4">Other Recommended Bundles</h2>
+    <div class="card-container">
+        @foreach (var bundle in Model.RecommendedBundles.Take(6))
+        {
+            <a href="@Url.Action("ViewBundle", "SimServicesToDo", new {area = "Admin", id = bundle.SimServiceId })" class="card shadow rounded">
+                <img src="/@bundle.ImgUrl" alt="Card image" class="card-img">
+                <div class="card__content">
+                    <p class="card__title">@bundle.SimServiceName</p>
+                    <p class="card__description">
+                        @bundle.SimServiceType
+                        @if (!bundle.SimServiceType.Equals("Internet", StringComparison.OrdinalIgnoreCase))
+                        {
+                            <text>, for $@bundle.Price</text>
+                        }
+                    </p>
+                </div>
+            </a>
+        }
+    </div>
+</div>
+<style>
+    .container {
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Align cards in a row with space between */
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* Display 3 cards per row, with space */
+    max-width: calc(33.333% - 20px);
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.card__content {
+    padding: 15px;
+    background-color: rgba(242, 242, 242, 0.9);
+    text-align: center;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+@@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Display 2 cards per row on smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Display 1 card per row on the smallest screens */
+        max-width: 100%;
+    }
+}
+
+</style>

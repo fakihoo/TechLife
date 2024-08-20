@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechLife.Data;
 
@@ -11,9 +12,11 @@ using TechLife.Data;
 namespace TechLife.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240819075650_AddViewToSimServiceToDo")]
+    partial class AddViewToSimServiceToDo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -775,9 +778,6 @@ namespace TechLife.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Viewed")
-                        .HasColumnType("int");
-
                     b.HasKey("SimServiceId");
 
                     b.ToTable("SimServices");
@@ -793,8 +793,7 @@ namespace TechLife.Migrations
                             Price = 4m,
                             SimServiceName = "4.5$ Recharging Card",
                             SimServiceType = "Normal",
-                            SimType = "Mtc",
-                            Viewed = 0
+                            SimType = "Mtc"
                         },
                         new
                         {
@@ -806,8 +805,7 @@ namespace TechLife.Migrations
                             Price = 7m,
                             SimServiceName = "7.5$ Recharging Card",
                             SimServiceType = "Normal",
-                            SimType = "Mtc",
-                            Viewed = 0
+                            SimType = "Mtc"
                         },
                         new
                         {
@@ -819,8 +817,7 @@ namespace TechLife.Migrations
                             Price = 4m,
                             SimServiceName = "4.5$ Recharging Card",
                             SimServiceType = "Normal",
-                            SimType = "Alfa",
-                            Viewed = 0
+                            SimType = "Alfa"
                         },
                         new
                         {
@@ -832,8 +829,7 @@ namespace TechLife.Migrations
                             Price = 7m,
                             SimServiceName = "7.5$ Recharging Card",
                             SimServiceType = "Normal",
-                            SimType = "Alfa",
-                            Viewed = 0
+                            SimType = "Alfa"
                         });
                 });
 

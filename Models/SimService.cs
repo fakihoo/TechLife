@@ -20,5 +20,6 @@ namespace TechLife.Models
         [Required]
         public int Amount { get; set; }
         public string ImgUrl { get; set; }
+        public int Viewed { get; set; }
     }
 }

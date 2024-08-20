@@ -114,12 +114,14 @@
         <img src="~/img/51cfad98bd791d1cd2095a05eaa59604.png" alt="Payment Success Image" class="payment-success-img" />
         @if (Model.RecommendedBundles != null)
         {
-            <h2>We Recommend the Following Internet Bundles:</h2>
+            <h2>We Recommend the Following Bundles:</h2>
         }
         <div class="card-container">
             @foreach (var bundle in Model.RecommendedBundles)
             {
-                <a href="@Url.Action("Add", "SimServicesToDo", new { area = "Admin", id = bundle.SimServiceId })" class="card shadow rounded">
+                string actionName = bundle.SimServiceType.Equals("Internet", StringComparison.OrdinalIgnoreCase) ? "ViewBundle" : "Add";
+
+                <a href="@Url.Action(actionName, "SimServicesToDo", new { area = "Admin", id = bundle.SimServiceId })" class="card shadow rounded">
                     <img src="/@bundle.ImgUrl" alt="Card image" class="card-img">
                     <div class="card__content">
                         <p class="card__title">@bundle.SimServiceName</p>

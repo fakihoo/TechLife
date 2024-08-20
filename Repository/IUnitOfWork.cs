@@ -10,6 +10,7 @@ namespace TechLife.Repository
         IToDoListRepository ToDoList { get; }
         ISimServiceRepository SimService { get; }
         ISimServicesToDoRepository SimServicesToDo { get; }
+        Task<int> SaveAsync();
         void Save();
     }
 }

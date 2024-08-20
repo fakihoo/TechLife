@@ -15,6 +15,8 @@ namespace TechLife.Models
         public int PhoneNumber { get; set; }
         public string SimType { get; set; }
         public double Price { get; set; }
+        public int Viewed { get; set; }
+        public DateTime CreateDate { get; set; } = DateTime.UtcNow;
 
         public int SimServiceId { get; set; }
         [ForeignKey("SimServiceId")]

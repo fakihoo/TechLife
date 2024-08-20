@@ -1,4 +1,5 @@
-﻿using TechLife.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using TechLife.Data;
 using TechLife.Models;
 using TechLife.Repository.IRepository;
 
@@ -23,7 +24,10 @@ namespace TechLife.Repository
             SimService = new SimServiceRepository(_db);
             SimServicesToDo = new SimServicesToDoRepository(_db);
         }
-
+        public async Task<int> SaveAsync()
+        {
+            return await _db.SaveChangesAsync();
+        }
         public void Save()
         {
             _db.SaveChanges();
