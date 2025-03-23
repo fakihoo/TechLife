@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TechLife.Models.Employee>
+@{
+    Layout = "_AdminLayout";
+}
+<h2>Employee List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Work Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Username</td>
+                <td>@employee.Password</td>
+                <td>@employee.Role</td>
+                <td>@employee.Email</td>
+                <td>@employee.Location</td>
+                <td>@employee.WorkLocation</td>
+            </tr>
+        }
+    </tbody>
+</table>

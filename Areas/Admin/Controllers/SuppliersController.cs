@@ -68,7 +68,7 @@ namespace TechLife.Areas.Admin.Controllers
             // Retrieve all supplier items for the specified supplier
             var supplierItems = await _supplierItemRepo.GetSupplierItemsBySupplierId(id);
 
-            ViewBag.SupplierName = supplier.Name; // Optional: Pass supplier name to view if needed
+            ViewBag.SupplierName = supplier.Name;
 
             return View(supplierItems);
         }

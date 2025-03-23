@@ -75,3 +75,20 @@ app.MapControllerRoute(
    name: "default",
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 app.Run();
+
+async Task CreateRolesAsync(RoleManager<IdentityRole> roleManager)
+{
+    // Define roles
+    string[] roleNames = { "Admin", "MaintenanceEmployee", "SimServiceEmployee" };
+
+    foreach (var roleName in roleNames)
+    {
+        // Check if the role already exists
+        var roleExists = await roleManager.RoleExistsAsync(roleName);
+        if (!roleExists)
+        {
+            // Create the role if it doesn't exist
+            await roleManager.CreateAsync(new IdentityRole(roleName));
+        }
+    }
+}

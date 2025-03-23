@@ -20,10 +20,12 @@ namespace TechLife.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, UserManager<IdentityUser> userManager)
         {
+            _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
         }
@@ -100,7 +102,6 @@ namespace TechLife.Areas.Identity.Pages.Account
 
             ReturnUrl = returnUrl;
         }
-
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
@@ -109,11 +110,36 @@ namespace TechLife.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                // Attempt to sign in the user
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
                 if (result.Succeeded)
                 {
+                    // Fetch the user based on their email
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+                    if (user != null)
+                    {
+                        var roles = await _userManager.GetRolesAsync(user);
+
+                        // Check the user's role and redirect accordingly
+                        if (roles.Contains(SD.Role_MaintEmployee))
+                        {
+                            _logger.LogInformation("Maintenance Employee logged in.");
+                            return LocalRedirect(Url.Content("~/MaintEmployee/Home/Index"));
+                        }
+                        else if (roles.Contains(SD.Role_SimEmployee))
+                        {
+                            _logger.LogInformation("SIM Service Employee logged in.");
+                            return LocalRedirect(Url.Content("~/SimEmployee/SimEmployeeHome/Index"));
+                        }
+                        else if (roles.Contains(SD.Role_Admin))
+                        {
+                            _logger.LogInformation("Admin logged in.");
+                            return LocalRedirect(Url.Content("~/Admin/Home/Index"));
+                        }
+                    }
+
+                    // Default redirection for other users
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
@@ -136,9 +162,9 @@ namespace TechLife.Areas.Identity.Pages.Account
             // If we got this far, something failed, redisplay form
             return Page();
         }
-        public static LoginModel GetLoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+        public static LoginModel GetLoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, UserManager<IdentityUser> userManager)
         {
-            return new LoginModel(signInManager, logger);
+            return new LoginModel(signInManager, logger, userManager);
         }
     }
 

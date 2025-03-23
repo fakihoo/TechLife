@@ -12,6 +12,14 @@ namespace TechLife.Models
         public string ServiceType { get; set; }
         public string deviceModel { get; set; }
         public string message { get; set; }
+        public bool IsCompleted { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? CompletedAt { get; set; }
+        public Service()
+        {
+            CreatedAt = DateTime.Now;
+            IsCompleted = false; 
+        }
 
     }
 }

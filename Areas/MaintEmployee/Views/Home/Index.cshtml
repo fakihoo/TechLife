@@ -1,0 +1,70 @@
+﻿@model TechLife.Models.DTOs.MaintDashboardViewModel
+@{
+    Layout = "_MaintEmployee";
+}
+<div class="container">
+    <h2>Maintenance Employee Dashboard</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3" style="cursor: pointer;" onclick="location.href='@Url.Action("TodaysTasks", "Home")'">
+                <div class="card-body">
+                    <h5 class="card-title">Requests Today</h5>
+                    <p class="card-text">@Model.TotalRequestsToday</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Completed Today</h5>
+                    <p class="card-text">@Model.CompletedRequestsToday</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Request History</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Service ID</th>
+                <th>Customer Name</th>
+                <th>Service Type</th>
+                <th>Device Model</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var service in Model.RequestHistory)
+            {
+                <tr>
+                    <td>@service.ServiceId</td>
+                    <td>@service.CustName</td>
+                    <td>@service.ServiceType</td>
+                    <td>@service.deviceModel</td>
+                    <td>@(service.IsCompleted ? "Completed" : "Pending")</td>
+                    <td>@service.CreatedAt.ToString("MM/dd/yyyy")</td>
+                    <td>
+                        @if (!service.IsCompleted)
+                        {
+                            <a href="@Url.Action("MarkAsDone", "Home", new { Area = "MaintEmployee", serviceId = service.ServiceId })" class="btn btn-success btn-sm">
+                                Done
+                            </a>
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    function confirmDone(url) {
+        if (confirm('Are you sure you want to mark this task as done?')) {
+            window.location.href = url;
+        }
+    }
+</script>

@@ -59,7 +59,39 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
         }
 
-        
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 0 15px; 
+        }
+
+            .main-nav .logo {
+                flex-shrink: 0;
+            }
+
+            .main-nav .main-links {
+                display: flex;
+                justify-content: center;
+                flex-grow: 1;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 15px;
+            }
+
+                .main-nav .main-links li a {
+                    text-decoration: none;
+                    padding: 5px 10px;
+                }
+
+            .main-nav .login-buttons {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin-left: auto;
+            }
+
     </style>
 </head>
 <body>
@@ -81,18 +113,16 @@
                         <a href="/Customer/Home/Index" class="logo">
                             <img src="~/img/techlifelogo33.png" alt="Chain App Dev">
                         </a>
-                        <ul class="nav">
+                        <ul class="nav main-links">
                             <li class="scroll-to-section"><a asp-area="" asp-controller="Home" asp-action="Index" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a asp-area="" asp-controller="ShopStore" asp-action="Index">Shop</a></li>
-                            <li class="scroll-to-section"><a asp-area="Customer" asp-controller="Product" asp-action="Index">Selling</a></li>
+                            <li class="scroll-to-section"><a asp-area="" asp-controller="ShopStore" asp-action="Index">Store</a></li>
+                            <li class="scroll-to-section"><a asp-area="Customer" asp-controller="Product" asp-action="Index">Market</a></li>
                             <li class="scroll-to-section"><a asp-area="Customer" asp-controller="Service" asp-action="PHIndex">Maintenance</a></li>
                             <li class="scroll-to-section"><a asp-area="Customer" asp-controller="SimService" asp-action="Index">Sim Service</a></li>
+                        </ul>
+                        <ul class="nav login-buttons">
                             @await Html.PartialAsync("_LoginPartial")
                         </ul>
-
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
                     </nav>
                 </div>
             </div>

@@ -29,7 +29,7 @@ namespace TechLife.Data
         public DbSet<Image> Images { get; set; }
         public DbSet<ProductLike> ProductLikes { get; set; }
         public DbSet<ProductView> ProductViews { get; set; }
-
+        public DbSet<Employee> Employees { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

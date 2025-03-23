@@ -413,6 +413,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\slick.woff"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\Screenshot (146).png",
+      "PackagePath": "staticwebassets\\assets\\images\\Screenshot (146).png"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\assets\\images\\about-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\about-bg.jpg"
     },
@@ -1353,12 +1357,20 @@
       "PackagePath": "staticwebassets\\img\\4b6f3e2f-2bb8-4f77-88a1-2fab85f5c687_OIP (2).jfif"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\4ddc2c80-466c-4b6e-8edf-095bd78d3e88_R (2).jfif",
+      "PackagePath": "staticwebassets\\img\\4ddc2c80-466c-4b6e-8edf-095bd78d3e88_R (2).jfif"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\50dff9c5-0985-4e75-ac80-1c78b62e9e69_R.jfif",
       "PackagePath": "staticwebassets\\img\\50dff9c5-0985-4e75-ac80-1c78b62e9e69_R.jfif"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\51cfad98bd791d1cd2095a05eaa59604.png",
       "PackagePath": "staticwebassets\\img\\51cfad98bd791d1cd2095a05eaa59604.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\5b5c9e30-15fb-48f6-a528-cbbd2fe63ec0_2e3977be99519504fe4a5f97dd4e4e62.jpg",
+      "PackagePath": "staticwebassets\\img\\5b5c9e30-15fb-48f6-a528-cbbd2fe63ec0_2e3977be99519504fe4a5f97dd4e4e62.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\5e6e927f-6162-466b-8077-295580069dbf_028e0308-738c-4faa-a82f-23d17c19709a_2310x1300.jpg",
@@ -1397,6 +1409,10 @@
       "PackagePath": "staticwebassets\\img\\812a89da-671a-474c-8a7c-db1c0a143e39_7772760_img7174_jpeg8aef7e15d1c1423faf27f6c27299f9dc.jfif"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\8cbf8072-e332-418a-bd68-da32b24c5ece_used_iphone_8_plus_64_1554285223_e1ed0bd0_progressive.jpg",
+      "PackagePath": "staticwebassets\\img\\8cbf8072-e332-418a-bd68-da32b24c5ece_used_iphone_8_plus_64_1554285223_e1ed0bd0_progressive.jpg"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\8e7c93a7-e822-4b2f-ba0a-343006398336_R (1).jfif",
       "PackagePath": "staticwebassets\\img\\8e7c93a7-e822-4b2f-ba0a-343006398336_R (1).jfif"
     },
@@ -1419,6 +1435,10 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\IMAC.jpg",
       "PackagePath": "staticwebassets\\img\\IMAC.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\IMG_1649.JPG",
+      "PackagePath": "staticwebassets\\img\\IMG_1649.JPG"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\OIG1.jfif",
@@ -1719,6 +1739,10 @@
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\photo.jpg",
       "PackagePath": "staticwebassets\\img\\photo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\profile\\360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
+      "PackagePath": "staticwebassets\\img\\profile\\360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\source\\repos\\TechLife\\TechLife\\wwwroot\\img\\profile\\WhatsApp Image 2023-12-28 at 00.35.46_5ecbecb1.jpg",

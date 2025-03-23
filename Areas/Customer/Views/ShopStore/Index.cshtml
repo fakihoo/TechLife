@@ -122,7 +122,7 @@
                             }
                         </p>
                         <div class="w-90 btn-group" role="group">
-                            <a asp-controller="Shop" asp-action="Views" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                            <a asp-area="Customer" asp-controller="Shop" asp-action="Views" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
                                 <i class="bi bi-binoculars"></i> View
                             </a>
                             @if (!User.IsInRole(SD.Role_Admin))
